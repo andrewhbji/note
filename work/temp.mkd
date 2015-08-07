@@ -1,0 +1,71 @@
+包含三部分
+
+1. 系统鉴权框架所必须的服务和鉴权器  
+
+2. UI框架
+
+3. 工具类
+
+## 依赖关系
+
+- com.android.support:support-v4:21.0.3+
+- com.android.support:appcompat-v7:21.0.3+
+- com.android.support:support-v13:21.0.3+
+- com.google.code.gson:gson:2.3.1+
+- com.turbomanage.basic-http-client:http-client-android:0.89
+- com.google.api-client:google-api-client:1.20.0
+- com.belerweb:pinyin4j:2.5.0
+- volley
+
+## 源码说明
+
+- *.accounts.AccountAuthenticator: 鉴权器,在业务module的AndroidManifast中配置,被系统调用
+- *.accounts.AccountAuthenticatorService:鉴权服务,在业务module的AndroidManifast中配置,被系统调用
+- *.account.AccountUtils: 帐号相关工具类
+- *.app.BaseApp: 继承系统Application,在App启动时的初始化
+- *.base.model.BaseModel: model类的base,不推荐使用
+- *.base.ui.widget 一些可复用的UI组件
+    - *.CollectionView: 继承ListView,数据可分组
+    - *.CollectionViewCallback: callback,用于实现生成分组header和分组内容
+    - *.DrawShadowFrameLayout: 主界面侧滑菜单容器
+    - *.MultiSwipeRefreshLayout: 下拉刷新组件
+    - *.ObservableScroller: 滚动显示组件,可以 通过观察者监听滚动状态
+    - *.ScrimInsetsScrollView: 侧滑菜单控件, 定义菜单滑动时背景色变化的动作
+    
+- *.net.HttpMethod: 这里只定义了GET,POST,不推荐使用
+- *.net.NetConnection: 
+
+- *.util 工具类
+    - *.app.PrefUtils: App设置开关相关的工具类
+    - *.data: 集合类工具
+        - *.Lists: list 工具
+        - *.Maps: map工具
+    - *.database 数据库相关的工具
+        - *.JSONHandler: 业务module中io包中的类继承此类,实现process方法处理json,实现makeContentProviderOperations处理写数据库逻辑
+        - *.SelectionBuilder: ContentProvider中用来构造selection子句
+        - *.datatime 时间转换工具
+        - *.logcat.LogUtils 日志工具
+        - *.model.HashUtils: 生成hashcode
+        - *.network:.NetworkUtils: 检查网络连接是否可用
+        - *.observer.ThrottledContentObserver: 重写的ContentObserver的onChange方法,限制onChange被系统回调的频率
+        - *.string: 字符串处理工具
+        - *.ui UI相关工具
+            *.LUtils: Android 5.0 UI APIs Helper 类
+            *.TextViewUtils: TextView赋值类
+            *.UIUtils: 其他UI相关的行为
+        - *.volley: 异步通信框架volley相关工具
+-Config: appbase module 配置
+    
+## 资源说明
+- color 使用xml生成UI组件配色
+- drawable  使用xml生成ui组件
+- drawable-*dpi 图片,点九图资源文件
+- layout: 布局文件
+- values.colors: 定义颜色值常量,业务module可以复用这里的配置
+- values.dimens: 定义UI尺寸
+- values.integers: 定义数值型常量
+- values.strings: 定义string常量
+- values.style: 样式文件,业务module中的样式文件需要继承此文件中定义的样式
+- value.attrs: 样式,布局文件中用到的自定义属性
+- value.refs: 定义引用
+- value.fonts: 布局,样式文件中用到的字体定义
