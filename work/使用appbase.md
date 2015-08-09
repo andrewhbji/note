@@ -1,0 +1,400 @@
+# 工程结构
+
+Gradle 工程包括：
+
+- setting.gradle:设置当前工程包含的module
+    
+- build.gradle:包含两部分配置
+        
+    - 依赖的gradle版本
+	- maven 库的路径，默认库jcenter，其他maven库
+
+- gradlew、gradlew.bat 分别为调用gradle的sh和bat脚本
+
+- local.properties:Android SDK路径
+
+- module 文件夹
+
+- *.iml, ./gradle/,./idea/ ,./build/由gradle自动生成,提交时忽略
+
+# module 结构
+- *.jks:  Java签名文件
+- proguard-rules.pro: 混淆规则
+- lib : 第三方jar包
+- src: 源码
+	- main
+		- jniLibs: jar包依赖jnilib
+		- java : java 源码
+		- res: 资源文件
+	- androidTest: 单元测试文件夹
+- *.jks: Java签名文件
+- *.iml, ./build/ 由gradle生成,提交时忽略
+- build.gradle: 
+	- 编译配置
+	- 使用的android sdk, buiildtools版本,当前以及最低的Android sdk版本,app/module版本号
+	- 签名配置
+	- 混淆配置
+	- lint代码检查
+	- 编译规则(aptOption)以及打包(packagingOption)
+	- 依赖配置
+
+# appbase module 说明
+appbase包含三部分
+
+1. 系统鉴权框架所必须的服务和鉴权器  
+
+2. UI框架
+
+3. 工具类
+
+## 依赖关系
+
+- com.android.support:support-v4:21.0.3+
+- com.android.support:appcompat-v7:21.0.3+
+- com.android.support:support-v13:21.0.3+
+- com.google.code.gson:gson:2.3.1+
+- com.turbomanage.basic-http-client:http-client-android:0.89
+- com.google.api-client:google-api-client:1.20.0
+- com.belerweb:pinyin4j:2.5.0
+- volley
+
+## 源码说明
+
+- *.accounts.AccountAuthenticator: 鉴权器,在业务module的AndroidManifast中配置,被系统调用
+- *.accounts.AccountAuthenticatorService:鉴权服务,在业务module的AndroidManifast中配置,被系统调用
+- *.account.AccountUtils: 帐号相关工具类
+- *.app.BaseApp: 继承系统Application,在App启动时的初始化
+- *.base.model.BaseModel: model类的base,不推荐使用
+- *.base.ui.widget 一些可复用的UI组件
+    - *.CollectionView: 继承ListView,数据可分组
+    - *.CollectionViewCallback: callback,用于实现生成分组header和分组内容
+    - *.DrawShadowFrameLayout: 主界面侧滑菜单容器
+    - *.MultiSwipeRefreshLayout: 下拉刷新组件
+    - *.ObservableScroller: 滚动显示组件,可以 通过观察者监听滚动状态
+    - *.ScrimInsetsScrollView: 侧滑菜单控件, 定义菜单滑动时背景色变化的动作
+    
+- *.net.HttpMethod: 这里只定义了GET,POST,不推荐使用
+- *.net.NetConnection: 
+
+- *.util 工具类
+    - *.app.PrefUtils: App设置开关相关的工具类
+    - *.data: 集合类工具
+        - *.Lists: list 工具
+        - *.Maps: map工具
+    - *.database 数据库相关的工具
+        - *.JSONHandler: 业务module中io包中的类继承此类,实现process方法处理json,实现makeContentProviderOperations处理写数据库逻辑
+        - *.SelectionBuilder: ContentProvider中用来构造selection子句
+        - *.datatime 时间转换工具
+        - *.logcat.LogUtils 日志工具
+        - *.model.HashUtils: 生成hashcode
+        - *.network:.NetworkUtils: 检查网络连接是否可用
+        - *.observer.ThrottledContentObserver: 重写的ContentObserver的onChange方法,限制onChange被系统回调的频率
+        - *.string: 字符串处理工具
+        - *.ui UI相关工具
+            *.LUtils: Android 5.0 UI APIs Helper 类
+            *.TextViewUtils: TextView赋值类
+            *.UIUtils: 其他UI相关的行为
+        - *.volley: 异步通信框架volley相关工具
+-Config: appbase module 配置
+    
+## 资源说明
+- color 使用xml生成UI组件配色
+- drawable  使用xml生成ui组件
+- drawable-*dpi 图片,点九图资源文件
+- layout: 布局文件
+- values.colors: 定义颜色值常量,业务module可以复用这里的配置
+- values.dimens: 定义UI尺寸
+- values.integers: 定义数值型常量
+- values.strings: 定义string常量
+- values.style: 样式文件,业务module中的样式文件需要继承此文件中定义的样式
+- value.attrs: 样式,布局文件中用到的自定义属性
+- value.refs: 定义引用
+- value.fonts: 布局,样式文件中用到的字体定义
+
+# 在业务module 使用样式
+参考 demoTheme model，过程如下：
+
+1. 新建phone/table module作为业务 module,targetSdkVersion
+选择22，minSdkVersion选择15，然后创建5个MainActivity
+
+2. 修改业务 module的build.gradle，在android部分添加packageOptios，在dependencies部分添加依赖appbase的说明：
+
+	```
+	android{
+		packagingOptions {
+			exclude 'META-INF/DEPENDENCIES'
+        			exclude 'META-INF/NOTICE'
+        			exclude 'META-INF/LICENSE'
+        			exclude 'META-INF/LICENSE.txt'
+        			exclude 'META-INF/NOTICE.txt'
+    	}
+	}
+	dependencies {
+    		compile fileTree(include: ['*.jar'], dir: 'libs')
+    		compile project(':appbase')
+	}
+	```
+    
+3. 引入appbase中定义样式
+
+	1. 在src/main/res/values/styles.xml中添加: 
+
+        ```xml
+        		<style name = "Theme.demo"  parent="Theme.APPBase">
+        			<item name="actionBarInsetStart">@dimen/keyline_2</item>
+    		    </style>
+        ```
+
+	2. 修改AndroidManifast.xml的 application 元素的android:theme属性为 @style/Theme.demo
+
+4. 在AndroidManifast.xml中授权调用系统Account鉴权功能
+
+	```xml
+    	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    	<uses-permission android:name="android.permission.READ_PROFILE" />
+    	<uses-permission android:name="android.permission.READ_CONTACTS" />
+    	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	```
+
+5. 复制base文件夹中的AbstractBaseActivity.java和RecentTasksStyler.java到 业务module中
+
+6. 修改 RecentTasksStyler.java,引用当前module中的ic_launcher
+
+	```java
+		if (sIcon == null) {
+            		sIcon = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher);
+        }
+	```
+
+7. 修改Activity的布局文件为：
+
+	```xml
+	<android.support.v4.widget.DrawerLayout
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:app="http://schemas.android.com/apk/res-auto"
+    	xmlns:tools="http://schemas.android.com/tools"
+    	android:id="@+id/drawer_layout"
+	   	 android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:fitsSystemWindows="true"
+    	tools:context="com.example.andrea.myapplication.MainActivity1">
+    	
+    	<com.itic.mobile.base.ui.widget.DrawShadowFrameLayout
+        	android:id="@+id/main_content"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:clipChildren="false"
+        	app:shadowDrawable="@drawable/header_shadow">
+
+        		<com.itic.mobile.base.ui.widget.MultiSwipeRefreshLayout
+            	android:id="@+id/swipe_refresh_layout"
+            	android:layout_width="match_parent"
+            	android:layout_height="match_parent">
+
+            		<RelativeLayout
+                		android:layout_width="match_parent"
+                		android:layout_height="match_parent">
+
+                			<TextView
+                    			android:layout_width="wrap_content"
+                    			android:layout_height="wrap_content"
+                    			android:textAppearance="?android:attr/textAppearanceMedium"
+                    			android:text="@string/hello_world"
+                    			android:id="@+id/textView"
+                    			android:layout_marginTop="69dp"
+                    			android:layout_alignParentTop="true"
+                    			android:layout_alignParentLeft="true"
+                    			android:layout_alignParentStart="true" />
+            		</RelativeLayout>
+        		</com.itic.mobile.base.ui.widget.MultiSwipeRefreshLayout>
+
+        		<LinearLayout
+            	android:id="@+id/headerbar"
+            	style="@style/HeaderBar"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:clickable="true"
+            	android:orientation="vertical">
+
+            		<include layout="@layout/toolbar_actionbar" />
+
+        		</LinearLayout>
+
+    	</com.itic.mobile.base.ui.widget.DrawShadowFrameLayout>
+
+    		<!-- Nav drawer -->
+    	<include layout="@layout/navdrawer" />
+
+	</android.support.v4.widget.DrawerLayout>
+	```
+
+8. 创建BaseActivityImpl，继承AbstractBaseActivity，实现
+	- goToNavDrawerItem： 通过主菜单切换Activity
+	- populateNavDrawer： 填充主菜单
+	- getDrawerItemIconID： 获取Icon 的资源ID
+	- getDrawerItemTitleID：获取Activity标题的资源ID
+	- isSpecialItem： 设置特殊的Activity，具体参考AbstractBaseActivity中的注释
+
+	代码如下所示：
+	
+	```java
+	public class BaseActivityImpl extends AbstractBaseActivity {
+
+	    protected static final int NAVDRAWER_ITEM_1 = 0;
+	    protected static final int NAVDRAWER_ITEM_2 = 1;
+	    protected static final int NAVDRAWER_ITEM_3 = 2;
+	    protected static final int NAVDRAWER_ITEM_4 = 3;
+	    protected static final int NAVDRAWER_ITEM_5 = 4;
+
+	    private static final int[] NAVDRAWER_TITLE_RES_ID = new int[]{
+	            R.string.title_activity_main1,
+	            R.string.title_activity_main2,
+	            R.string.title_activity_main3,
+	            R.string.title_activity_main4,
+	            R.string.title_activity_main5
+	    };
+
+	    private static final int[] NAVDRAWER_ICON_RES_ID = new int[]{
+	            R.mipmap.ic_drawer_item1,
+	            R.mipmap.ic_drawer_item2,
+	            R.mipmap.ic_drawer_item3,
+	            R.mipmap.ic_drawer_item4,
+	            R.mipmap.ic_drawer_item5
+	    };
+
+	    @Override
+	    protected void requestDataRefresh() {
+
+	    }
+
+	    @Override
+	    protected String getAccountType() {
+	        return null;
+	    }
+
+	    @Override
+	    protected void goToNavDrawerItem(int item) {
+	        Intent intent;
+	        switch(item){
+	            case NAVDRAWER_ITEM_1:
+	                intent = new Intent(getApplicationContext(),MainActivity1.class);
+	                startActivity(intent);
+	                finish();
+	                break;
+	            case NAVDRAWER_ITEM_2:
+	                intent = new Intent(getApplicationContext(),MainActivity2.class);
+	                startActivity(intent);
+	                finish();
+	                break;
+            case NAVDRAWER_ITEM_3:
+	                intent = new Intent(getApplicationContext(),MainActivity3.class);
+	                startActivity(intent);
+	                finish();
+	                break;
+            case NAVDRAWER_ITEM_4:
+	                intent = new Intent(getApplicationContext(),MainActivity4.class);
+	                startActivity(intent);
+	                finish();
+	                break;
+            case NAVDRAWER_ITEM_5:
+	                intent = new Intent(getApplicationContext(),MainActivity5.class);
+	                startActivity(intent);
+	                break;
+	        }
+	    }
+
+	    @Override
+	    protected void watchSyncStateChange() {
+
+	    }
+
+	    @Override
+	    protected void startLoginProcess() {
+
+	    }
+
+	    @Override
+	    protected boolean isSpecialItem(int itemId) {
+	        return itemId == NAVDRAWER_ITEM_5;
+	    }
+
+	    @Override
+	    protected void populateActiveAccount(Account account) {
+
+	    }
+
+	    @Override
+	    protected void populateNavDrawer() {
+	        mNavDrawerItems.add(NAVDRAWER_ITEM_1);
+	        mNavDrawerItems.add(NAVDRAWER_ITEM_2);
+	        mNavDrawerItems.add(NAVDRAWER_ITEM_3);
+	        mNavDrawerItems.add(NAVDRAWER_ITEM_4);
+	        mNavDrawerItems.add(NAVDRAWER_ITEM_5);
+	        createNavDrawerItems();
+	    }
+
+	    @Override
+	    protected int getDrawerItemIconID(int itemID) {
+	        return itemID >= 0 && itemID < NAVDRAWER_ICON_RES_ID.length ? NAVDRAWER_ICON_RES_ID[itemID] : 0;
+	    }
+
+	    @Override
+	    protected int getDrawerItemTitleID(int itemID) {
+	        return itemID >= 0 && itemID < NAVDRAWER_TITLE_RES_ID.length ?NAVDRAWER_TITLE_RES_ID[itemID] : 0;
+	    }
+	}
+	```
+	
+9. 修改5个MainActivity，前4个修改为：
+
+	```java
+	public class MainActivity* extends BaseActivityImpl {
+
+    		@Override
+    		protected void onCreate(Bundle savedInstanceState) {
+        			super.onCreate(savedInstanceState);
+        			setContentView(R.layout.activity_main);
+        			overridePendingTransition(0, 0);
+    		}
+
+    	//一级界面必须覆盖这个方法，返回值为BaseActivityImpl中定义的与该acivity对应的NAVDRAWER_ITEM值
+    		@Override
+    		protected int getSelfNavDrawerItem() {
+        			return NAVDRAWER_ITEM_*;
+    		}
+	}
+	```
+特殊的MainActivity5修改为：
+
+	```
+	public class MainActivity5 extends BaseActivityImpl {
+
+	    @Override
+	    protected void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.activity_main);
+	    }
+
+	    @Override
+	    protected void onPostCreate(Bundle savedInstanceState) {
+	        super.onPostCreate(savedInstanceState);
+	        final Toolbar toolbar = getActionBarToolbar();
+	        toolbar.setNavigationIcon(R.drawable.ic_up);
+	        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+	            @Override
+	            public void onClick(View v) {
+	                finish();
+	            }
+	        });
+	    }
+
+	    //一级界面必须覆盖这个方法，返回值为BaseActivityImpl中定义的与该acivity对应的NAVDRAWER_ITEM值
+	    @Override
+	    protected int getSelfNavDrawerItem() {
+	        return NAVDRAWER_ITEM_5;
+	    }
+	}
+
+	```
+
