@@ -29,7 +29,7 @@ sudo modprobe hfsplus #创建一个hfsplus文件系统模块
 sudo mount -t hfsplus -o loop example.img /media/example # 文件系统挂载到hfsplus文件系统模块
 ```
 
-4. 用Brasero把img转换成iso格式. Brasero中选数据项目(创建一个数据cd/dvd)，选择上面挂在的img文件
+4. 用Brasero把img转换成iso格式. Brasero中选数据项目(创建一个数据cd/dvd)，选择/media/example下的所有文件
 
 5. 翻刻一个iso就出来了
 
