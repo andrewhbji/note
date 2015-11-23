@@ -1,0 +1,40 @@
+﻿git checkout -t origin/android-goldfish-3.4 -b goldfish3.4
+
+make -C /usr/src/linux-headers-3.13.0-32-generic M=`pwd` modules // -C指定的是linux内核树路径,不是代码树路径
+
+dmesg //检测和控制内核环缓冲,可以收集内核输出
+
+git revert HEAD 回滚到HEAD版本
+git show HEAD 查看HEAD版本
+
+http://blog.csdn.net/rig622/article/details/7608317
+
+
+vi + ctags
+	:ta + 函数名 查找并调转到指定函数
+	:ts [+ 函数名] 查找并列出指定函数
+	ctrl + ] 跳转代码
+	ctrl + t 是ctrl + ] 反操作
+	/ + 内容 查找当前文件的内容
+	n 向下查找
+	N 向上查找
+
+find . -name "Android.mk" | xargs grep LOCAL_MODULE | grep init 列出所有LOCAL_MODULE的值为init的Android.mk文件的路径
+
+grep "main(" core/init/* 列出指定路径下存在main(的文件
+
+ctags 失效的状况:
+	MACRO 以及 函数指针
+
+
+aosp 覆盖package: 在目标MODULE的Android.mk中添加LOCAL_OVERRIDES_PACKAGES:= OVERRIDED_MODULE_NAME
+
+UbuntuServer14.04设置静态IP和dns
+iface eth0 inet static
+address 192.168.3.3
+netmask 255.255.255.0
+gateway 192.168.3.1
+[dns-search example.com]
+dns-nameservers 192.168.3.45 [192.168.8.10]
+
+df -h 查看文件系统使用情况
