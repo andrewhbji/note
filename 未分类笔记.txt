@@ -30,6 +30,7 @@ ctags 失效的状况:
 aosp 覆盖package: 在目标MODULE的Android.mk中添加LOCAL_OVERRIDES_PACKAGES:= OVERRIDED_MODULE_NAME
 
 UbuntuServer14.04设置静态IP和dns
+vim /etc/network/interfaces
 iface eth0 inet static
 address 192.168.3.3
 netmask 255.255.255.0
