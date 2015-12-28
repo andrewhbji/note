@@ -5,20 +5,20 @@
 read -p "回显内容" 变量
 - stdout:
 echo -e "回显内容"
->备注：参考sh01.sh
+>备注：参考 sh01.sh
 
 ##日期:
 $(date [选项] [格式参数])
->备注：参考sh02.sh
+>备注：参考 sh02.sh
 
 ##算数运算:
 total=$($firstnu*$secnu)
->备注：参考sh03.sh
+>备注：参考 sh03.sh
 
 ##script 的运行方式差异 (source, sh script, ./script)
 - 直接运行的方式来运行 script, 子shell完成后，子shell的变量就地销毁，不会传回给父shell
 - 利用 source 来运行脚本：在父程序中运行，子shell完成后，子shell的变量传回给父shell
->备注：参考[鸟哥私房菜十三章第二节2.2](http://vbird.dic.ksu.edu.tw/linux_basic/0340bashshell-scripts_2.php#some_ex_run)
+>备注：参考 [鸟哥私房菜十三章第二节2.2](http://vbird.dic.ksu.edu.tw/linux_basic/0340bashshell-scripts_2.php#some_ex_run)
 
 ##逻辑判断
 ###test命令
@@ -82,7 +82,7 @@ test str1 != str2	#判定 str1 是否不等於 str2 ，若相等，则回传 fal
 
 ####格式
 [表达式]
->备注：样例参考sh06.sh, sh06-2.sh
+>备注：样例参考 sh06.sh, sh06-2.sh
 
 ###if else条件判断
 >备注：这个[]不是可选项的意思
@@ -97,7 +97,7 @@ else
  表达式
 fi
 ```
->备注：样例参考sh06-3.sh
+>备注：样例参考 sh06-3.sh
 
 ###case 条件判断
 ####格式
@@ -115,7 +115,7 @@ case  $变量名称 in     #<==关键字为 case ，还有变量前有钱字号
 	;;
 esac                  #<==最终的 case 结尾！『反过来写』思考一下！
 ```
->备注：样例参考sh09-2.sh,sh12.sh
+>备注：样例参考 sh09-2.sh,sh12.sh
 
 ##函数
 ###函数声明
@@ -128,13 +128,13 @@ function fname() {
 ```
 fname;
 ```
->备注：样例参考sh12-2.sh
+>备注：样例参考 sh12-2.sh
 
 ###函数传参
 ```
 fname n;
 ```
->备注：样例参考sh12-3.sh
+>备注：样例参考 sh12-3.sh
 
 ##Shell Script传入参数
 ###参数类型
@@ -145,12 +145,12 @@ fname n;
 - $@ 和 $* 列出所有参数
 ###参数使用：
 获取参数值的时候，必须在“”中使用，如“$0”
->备注：样例参考sh07.sh，sh12.sh
+>备注：样例参考 sh07.sh，sh12.sh
 
 ##shift 偏移传入参数
 ###格式
 shift [n], 默认偏移量为1，n可以指定具体的偏移量
->备注：样例参考sh08.sh
+>备注：样例参考 sh08.sh
 
 ##循环
 ###while do done
@@ -179,7 +179,7 @@ done
 ```
 ####功能
 类似java 迭代器，第一次回圈时，$var 的内容为 con1，第二次回圈时， $var 的内容为 con2,一次类推
->备注：样例参考sh15.sh，sh16.sh，sh17.sh , sh18.sh
+>备注：样例参考 sh15.sh，sh16.sh，sh17.sh , sh18.sh
 
 ###for do done 的数值处理
 ####格式:
@@ -191,7 +191,7 @@ done
 ```
 ####功能
 类似c语言for循环
->备注：样例参考sh19.sh
+>备注：样例参考 sh19.sh
 
 ##Shell Script追踪和debug
 ###命令格式
@@ -202,4 +202,4 @@ sh [-nvx] **.sh
 - -n  ：不要运行 script，仅查询语法的问题；
 - -v  ：再运行 sccript 前，先将 scripts 的内容输出到萤幕上；
 - -x  ：将使用到的 script 内容显示到萤幕上，这是很有用的参数！
->参考[鸟哥私房菜十三章第六节](http://vbird.dic.ksu.edu.tw/linux_basic/0340bashshell-scripts_6.php)
+>参考 [鸟哥私房菜十三章第六节](http://vbird.dic.ksu.edu.tw/linux_basic/0340bashshell-scripts_6.php)
