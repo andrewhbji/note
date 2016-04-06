@@ -1,0 +1,8 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/sigusr.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_usr	/home/andrea/文档/study/note/linux/apue/examples/signals/sigusr.c	/^sig_usr(int signo)		\/* argument is signal number *\/$/;"	function	line:17	file:	signature:(int signo)

@@ -1,0 +1,1113 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+maketimeout	/home/andrea/文档/study/note/linux/apue/examples/threads/maketimeout.c	/^maketimeout(struct timespec *tsp, long minutes)$/;"	function	line:5	signature:(struct timespec *tsp, long minutes)
+NHASH	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^#define NHASH /;"	macro	line:4	file:
+HASH	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^#define HASH(/;"	macro	line:5	file:
+fh	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^struct foo *fh[NHASH];$/;"	variable	line:7	typeref:struct:foo
+hashlock	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^pthread_mutex_t hashlock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:8
+foo	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^struct foo {$/;"	struct	line:10	file:
+f_count	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^	int             f_count; \/* protected by hashlock *\/$/;"	member	line:11	struct:foo	file:
+f_lock	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^	pthread_mutex_t f_lock;$/;"	member	line:12	struct:foo	file:
+f_id	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^	int             f_id;$/;"	member	line:13	struct:foo	file:
+f_next	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^	struct foo     *f_next; \/* protected by hashlock *\/$/;"	member	line:14	struct:foo	typeref:struct:foo::foo	file:
+foo_alloc	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^foo_alloc(int id) \/* allocate the object *\/$/;"	function	line:19	signature:(int id)
+foo_hold	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^foo_hold(struct foo *fp) \/* add a reference to the object *\/$/;"	function	line:44	signature:(struct foo *fp)
+foo_find	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^foo_find(int id) \/* find an existing object *\/$/;"	function	line:52	signature:(int id)
+foo_rele	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex3.c	/^foo_rele(struct foo *fp) \/* release a reference to the object *\/$/;"	function	line:68	signature:(struct foo *fp)
+ntid	/home/andrea/文档/study/note/linux/apue/examples/threads/threadid.c	/^pthread_t ntid;$/;"	variable	line:4
+printids	/home/andrea/文档/study/note/linux/apue/examples/threads/threadid.c	/^printids(const char *s)$/;"	function	line:7	signature:(const char *s)
+thr_fn	/home/andrea/文档/study/note/linux/apue/examples/threads/threadid.c	/^thr_fn(void *arg)$/;"	function	line:19	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threads/threadid.c	/^main(void)$/;"	function	line:26	signature:(void)
+foo	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^struct foo {$/;"	struct	line:4	file:
+f_count	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^	int             f_count;$/;"	member	line:5	struct:foo	file:
+f_lock	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^	pthread_mutex_t f_lock;$/;"	member	line:6	struct:foo	file:
+f_id	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^	int             f_id;$/;"	member	line:7	struct:foo	file:
+foo_alloc	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^foo_alloc(int id) \/* allocate the object *\/$/;"	function	line:12	signature:(int id)
+foo_hold	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^foo_hold(struct foo *fp) \/* add a reference to the object *\/$/;"	function	line:29	signature:(struct foo *fp)
+foo_rele	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex1.c	/^foo_rele(struct foo *fp) \/* release a reference to the object *\/$/;"	function	line:37	signature:(struct foo *fp)
+main	/home/andrea/文档/study/note/linux/apue/examples/threads/timedlock.c	/^main(void)$/;"	function	line:5	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^ROOT=..$/;"	macro	line:1
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^EXTRALIBS=-pthread$/;"	macro	line:2
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:3
+BAR	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^BAR =$/;"	macro	line:6
+TLOCK	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  TLOCK =$/;"	macro	line:8
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:9
+TLOCK	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  TLOCK = timedlock$/;"	macro	line:11
+BAR	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  BAR = barrier$/;"	macro	line:14
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  EXTRALIBS=-pthread -lrt -lbsd$/;"	macro	line:15
+BAR	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  BAR = barrier$/;"	macro	line:18
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:19
+BAR	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  BAR = barrier$/;"	macro	line:22
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^  EXTRALIBS=-lpthread -lrt$/;"	macro	line:23
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/threads/Makefile	/^PROGS = badexit2 cleanup exitstatus threadid$/;"	macro	line:26
+foo	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^struct foo {$/;"	struct	line:4	file:
+a	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+b	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+c	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+d	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+printfoo	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^printfoo(const char *s, const struct foo *fp)$/;"	function	line:9	signature:(const char *s, const struct foo *fp)
+thr_fn1	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^thr_fn1(void *arg)$/;"	function	line:20	signature:(void *arg)
+thr_fn2	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^thr_fn2(void *arg)$/;"	function	line:29	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threads/badexit2.c	/^main(void)$/;"	function	line:36	signature:(void)
+cleanup	/home/andrea/文档/study/note/linux/apue/examples/threads/cleanup.c	/^cleanup(void *arg)$/;"	function	line:5	signature:(void *arg)
+thr_fn1	/home/andrea/文档/study/note/linux/apue/examples/threads/cleanup.c	/^thr_fn1(void *arg)$/;"	function	line:11	signature:(void *arg)
+thr_fn2	/home/andrea/文档/study/note/linux/apue/examples/threads/cleanup.c	/^thr_fn2(void *arg)$/;"	function	line:25	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threads/cleanup.c	/^main(void)$/;"	function	line:39	signature:(void)
+NTHR	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^#define NTHR /;"	macro	line:6	file:
+NUMNUM	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^#define NUMNUM /;"	macro	line:7	file:
+TNUM	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^#define TNUM /;"	macro	line:8	file:
+nums	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^long nums[NUMNUM];$/;"	variable	line:10
+snums	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^long snums[NUMNUM];$/;"	variable	line:11
+b	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^pthread_barrier_t b;$/;"	variable	line:13
+heapsort	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^#define heapsort /;"	macro	line:16	file:
+complong	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^complong(const void *arg1, const void *arg2)$/;"	function	line:26	signature:(const void *arg1, const void *arg2)
+thr_fn	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^thr_fn(void *arg)$/;"	function	line:43	signature:(void *arg)
+merge	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^merge()$/;"	function	line:60
+main	/home/andrea/文档/study/note/linux/apue/examples/threads/barrier.c	/^main()$/;"	function	line:81
+job	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^struct job {$/;"	struct	line:4	file:
+j_next	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^	struct job *j_next;$/;"	member	line:5	struct:job	typeref:struct:job::job	file:
+j_prev	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^	struct job *j_prev;$/;"	member	line:6	struct:job	typeref:struct:job::job	file:
+j_id	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^	pthread_t   j_id;   \/* tells which thread handles this job *\/$/;"	member	line:7	struct:job	file:
+queue	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^struct queue {$/;"	struct	line:11	file:
+q_head	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^	struct job      *q_head;$/;"	member	line:12	struct:queue	typeref:struct:queue::job	file:
+q_tail	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^	struct job      *q_tail;$/;"	member	line:13	struct:queue	typeref:struct:queue::job	file:
+q_lock	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^	pthread_rwlock_t q_lock;$/;"	member	line:14	struct:queue	file:
+queue_init	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^queue_init(struct queue *qp)$/;"	function	line:21	signature:(struct queue *qp)
+job_insert	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^job_insert(struct queue *qp, struct job *jp)$/;"	function	line:38	signature:(struct queue *qp, struct job *jp)
+job_append	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^job_append(struct queue *qp, struct job *jp)$/;"	function	line:55	signature:(struct queue *qp, struct job *jp)
+job_remove	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^job_remove(struct queue *qp, struct job *jp)$/;"	function	line:72	signature:(struct queue *qp, struct job *jp)
+job_find	/home/andrea/文档/study/note/linux/apue/examples/threads/rwlock.c	/^job_find(struct queue *qp, pthread_t id)$/;"	function	line:95	signature:(struct queue *qp, pthread_t id)
+thr_fn1	/home/andrea/文档/study/note/linux/apue/examples/threads/exitstatus.c	/^thr_fn1(void *arg)$/;"	function	line:5	signature:(void *arg)
+thr_fn2	/home/andrea/文档/study/note/linux/apue/examples/threads/exitstatus.c	/^thr_fn2(void *arg)$/;"	function	line:12	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threads/exitstatus.c	/^main(void)$/;"	function	line:19	signature:(void)
+NHASH	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^#define NHASH /;"	macro	line:4	file:
+HASH	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^#define HASH(/;"	macro	line:5	file:
+fh	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^struct foo *fh[NHASH];$/;"	variable	line:7	typeref:struct:foo
+hashlock	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^pthread_mutex_t hashlock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:9
+foo	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^struct foo {$/;"	struct	line:11	file:
+f_count	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^	int             f_count;$/;"	member	line:12	struct:foo	file:
+f_lock	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^	pthread_mutex_t f_lock;$/;"	member	line:13	struct:foo	file:
+f_id	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^	int             f_id;$/;"	member	line:14	struct:foo	file:
+f_next	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^	struct foo     *f_next; \/* protected by hashlock *\/$/;"	member	line:15	struct:foo	typeref:struct:foo::foo	file:
+foo_alloc	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^foo_alloc(int id) \/* allocate the object *\/$/;"	function	line:20	signature:(int id)
+foo_hold	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^foo_hold(struct foo *fp) \/* add a reference to the object *\/$/;"	function	line:45	signature:(struct foo *fp)
+foo_find	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^foo_find(int id) \/* find an existing object *\/$/;"	function	line:53	signature:(int id)
+foo_rele	/home/andrea/文档/study/note/linux/apue/examples/threads/mutex2.c	/^foo_rele(struct foo *fp) \/* release a reference to the object *\/$/;"	function	line:69	signature:(struct foo *fp)
+msg	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^struct msg {$/;"	struct	line:3	file:
+m_next	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^	struct msg *m_next;$/;"	member	line:4	struct:msg	typeref:struct:msg::msg	file:
+workq	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^struct msg *workq;$/;"	variable	line:8	typeref:struct:msg
+qready	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^pthread_cond_t qready = PTHREAD_COND_INITIALIZER;$/;"	variable	line:10
+qlock	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^pthread_mutex_t qlock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:12
+process_msg	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^process_msg(void)$/;"	function	line:15	signature:(void)
+enqueue_msg	/home/andrea/文档/study/note/linux/apue/examples/threads/condvar.c	/^enqueue_msg(struct msg *mp)$/;"	function	line:31	signature:(struct msg *mp)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/relation/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/relation/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/relation/Makefile	/^PROGS =	orphan3$/;"	macro	line:5
+sig_hup	/home/andrea/文档/study/note/linux/apue/examples/relation/orphan3.c	/^sig_hup(int signo)$/;"	function	line:5	file:	signature:(int signo)
+pr_ids	/home/andrea/文档/study/note/linux/apue/examples/relation/orphan3.c	/^pr_ids(char *name)$/;"	function	line:11	file:	signature:(char *name)
+main	/home/andrea/文档/study/note/linux/apue/examples/relation/orphan3.c	/^main(void)$/;"	function	line:20	signature:(void)
+signal	/home/andrea/文档/study/note/linux/apue/examples/lib/signal.c	/^signal(int signo, Sigfunc *func)$/;"	function	line:5	signature:(int signo, Sigfunc *func)
+childpid	/home/andrea/文档/study/note/linux/apue/examples/lib/popen.c	/^static pid_t	*childpid = NULL;$/;"	variable	line:9	file:
+maxfd	/home/andrea/文档/study/note/linux/apue/examples/lib/popen.c	/^static int		maxfd;$/;"	variable	line:14	file:
+popen	/home/andrea/文档/study/note/linux/apue/examples/lib/popen.c	/^popen(const char *cmdstring, const char *type)$/;"	function	line:17	signature:(const char *cmdstring, const char *type)
+pclose	/home/andrea/文档/study/note/linux/apue/examples/lib/popen.c	/^pclose(FILE *fp)$/;"	function	line:88	signature:(FILE *fp)
+lock_reg	/home/andrea/文档/study/note/linux/apue/examples/lib/lockreg.c	/^lock_reg(int fd, int cmd, int type, off_t offset, int whence, off_t len)$/;"	function	line:5	signature:(int fd, int cmd, int type, off_t offset, int whence, off_t len)
+ns_pipe	/home/andrea/文档/study/note/linux/apue/examples/lib/nspipe.c	/^ns_pipe(const char *name, int fd[2])$/;"	function	line:8	signature:(const char *name, int fd[2])
+sigflag	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^static volatile sig_atomic_t sigflag; \/* set nonzero by sig handler *\/$/;"	variable	line:3	file:
+newmask	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^static sigset_t newmask, oldmask, zeromask;$/;"	variable	line:4	file:
+oldmask	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^static sigset_t newmask, oldmask, zeromask;$/;"	variable	line:4	file:
+zeromask	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^static sigset_t newmask, oldmask, zeromask;$/;"	variable	line:4	file:
+sig_usr	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^sig_usr(int signo)	\/* one signal handler for SIGUSR1 and SIGUSR2 *\/$/;"	function	line:7	file:	signature:(int signo)
+TELL_WAIT	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^TELL_WAIT(void)$/;"	function	line:13	signature:(void)
+TELL_PARENT	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^TELL_PARENT(pid_t pid)$/;"	function	line:30	signature:(pid_t pid)
+WAIT_PARENT	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^WAIT_PARENT(void)$/;"	function	line:36	signature:(void)
+TELL_CHILD	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^TELL_CHILD(pid_t pid)$/;"	function	line:48	signature:(pid_t pid)
+WAIT_CHILD	/home/andrea/文档/study/note/linux/apue/examples/lib/tellwait.c	/^WAIT_CHILD(void)$/;"	function	line:54	signature:(void)
+daemonize	/home/andrea/文档/study/note/linux/apue/examples/lib/daemonize.c	/^daemonize(const char *cmd)$/;"	function	line:7	signature:(const char *cmd)
+MAXARGC	/home/andrea/文档/study/note/linux/apue/examples/lib/bufargs.c	/^#define	MAXARGC	/;"	macro	line:3	file:
+WHITE	/home/andrea/文档/study/note/linux/apue/examples/lib/bufargs.c	/^#define	WHITE	/;"	macro	line:4	file:
+buf_args	/home/andrea/文档/study/note/linux/apue/examples/lib/bufargs.c	/^buf_args(char *buf, int (*optfunc)(int, char **))$/;"	function	line:14	signature:(char *buf, int (*optfunc)(int, char **))
+STALE	/home/andrea/文档/study/note/linux/apue/examples/lib/servaccept.c	/^#define	STALE	/;"	macro	line:7	file:
+serv_accept	/home/andrea/文档/study/note/linux/apue/examples/lib/servaccept.c	/^serv_accept(int listenfd, uid_t *uidptr)$/;"	function	line:16	signature:(int listenfd, uid_t *uidptr)
+QLEN	/home/andrea/文档/study/note/linux/apue/examples/lib/servlisten.c	/^#define QLEN	/;"	macro	line:6	file:
+serv_listen	/home/andrea/文档/study/note/linux/apue/examples/lib/servlisten.c	/^serv_listen(const char *name)$/;"	function	line:13	signature:(const char *name)
+CONTROLLEN	/home/andrea/文档/study/note/linux/apue/examples/lib/Orecvfd.c	/^#define	CONTROLLEN	/;"	macro	line:5	file:
+cmptr	/home/andrea/文档/study/note/linux/apue/examples/lib/Orecvfd.c	/^static struct cmsghdr	*cmptr = NULL;		\/* malloc'ed first time *\/$/;"	variable	line:7	typeref:struct:cmsghdr	file:
+recv_fd	/home/andrea/文档/study/note/linux/apue/examples/lib/Orecvfd.c	/^recv_fd(int fd, ssize_t (*userfunc)(int, const void *, size_t))$/;"	function	line:15	signature:(int fd, ssize_t (*userfunc)(int, const void *, size_t))
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/lib/Makefile	/^ROOT=..$/;"	macro	line:4
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/lib/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:5
+LIBMISC	/home/andrea/文档/study/note/linux/apue/examples/lib/Makefile	/^LIBMISC	= libapue.a$/;"	macro	line:8
+OBJS	/home/andrea/文档/study/note/linux/apue/examples/lib/Makefile	/^OBJS   = bufargs.o cliconn.o clrfl.o \\$/;"	macro	line:9
+pr_mask	/home/andrea/文档/study/note/linux/apue/examples/lib/prmask.c	/^pr_mask(const char *str)$/;"	function	line:5	signature:(const char *str)
+clr_fl	/home/andrea/文档/study/note/linux/apue/examples/lib/clrfl.c	/^clr_fl(int fd, int flags)$/;"	function	line:5	signature:(int fd, int flags)
+CONTROLLEN	/home/andrea/文档/study/note/linux/apue/examples/lib/recvfd.c	/^#define	CONTROLLEN	/;"	macro	line:5	file:
+RELOP	/home/andrea/文档/study/note/linux/apue/examples/lib/recvfd.c	/^#define RELOP /;"	macro	line:8	file:
+RELOP	/home/andrea/文档/study/note/linux/apue/examples/lib/recvfd.c	/^#define RELOP /;"	macro	line:10	file:
+cmptr	/home/andrea/文档/study/note/linux/apue/examples/lib/recvfd.c	/^static struct cmsghdr	*cmptr = NULL;		\/* malloc'ed first time *\/$/;"	variable	line:13	typeref:struct:cmsghdr	file:
+recv_fd	/home/andrea/文档/study/note/linux/apue/examples/lib/recvfd.c	/^recv_fd(int fd, ssize_t (*userfunc)(int, const void *, size_t))$/;"	function	line:21	signature:(int fd, ssize_t (*userfunc)(int, const void *, size_t))
+readn	/home/andrea/文档/study/note/linux/apue/examples/lib/readn.c	/^readn(int fd, void *ptr, size_t n)$/;"	function	line:4	signature:(int fd, void *ptr, size_t n)
+sig_alrm	/home/andrea/文档/study/note/linux/apue/examples/lib/sleep.c	/^sig_alrm(int signo)$/;"	function	line:4	file:	signature:(int signo)
+sleep	/home/andrea/文档/study/note/linux/apue/examples/lib/sleep.c	/^sleep(unsigned int seconds)$/;"	function	line:10	signature:(unsigned int seconds)
+openmax	/home/andrea/文档/study/note/linux/apue/examples/lib/openmax.c	/^static long	openmax = OPEN_MAX;$/;"	variable	line:6	file:
+openmax	/home/andrea/文档/study/note/linux/apue/examples/lib/openmax.c	/^static long	openmax = 0;$/;"	variable	line:8	file:
+OPEN_MAX_GUESS	/home/andrea/文档/study/note/linux/apue/examples/lib/openmax.c	/^#define	OPEN_MAX_GUESS	/;"	macro	line:14	file:
+open_max	/home/andrea/文档/study/note/linux/apue/examples/lib/openmax.c	/^open_max(void)$/;"	function	line:17	signature:(void)
+pty_fork	/home/andrea/文档/study/note/linux/apue/examples/lib/ptyfork.c	/^pty_fork(int *ptrfdm, char *slave_name, int slave_namesz,$/;"	function	line:5	signature:(int *ptrfdm, char *slave_name, int slave_namesz, const struct termios *slave_termios, const struct winsize *slave_winsize)
+pr_exit	/home/andrea/文档/study/note/linux/apue/examples/lib/prexit.c	/^pr_exit(int status)$/;"	function	line:5	signature:(int status)
+signal_intr	/home/andrea/文档/study/note/linux/apue/examples/lib/signalintr.c	/^signal_intr(int signo, Sigfunc *func)$/;"	function	line:4	signature:(int signo, Sigfunc *func)
+CLI_PATH	/home/andrea/文档/study/note/linux/apue/examples/lib/cliconn.c	/^#define	CLI_PATH	/;"	macro	line:6	file:
+CLI_PERM	/home/andrea/文档/study/note/linux/apue/examples/lib/cliconn.c	/^#define	CLI_PERM	/;"	macro	line:7	file:
+cli_conn	/home/andrea/文档/study/note/linux/apue/examples/lib/cliconn.c	/^cli_conn(const char *name)$/;"	function	line:14	signature:(const char *name)
+err_ret	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_ret(const char *fmt, ...)$/;"	function	line:12	signature:(const char *fmt, ...)
+err_sys	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_sys(const char *fmt, ...)$/;"	function	line:26	signature:(const char *fmt, ...)
+err_cont	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_cont(int error, const char *fmt, ...)$/;"	function	line:42	signature:(int error, const char *fmt, ...)
+err_exit	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_exit(int error, const char *fmt, ...)$/;"	function	line:57	signature:(int error, const char *fmt, ...)
+err_dump	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_dump(const char *fmt, ...)$/;"	function	line:72	signature:(const char *fmt, ...)
+err_msg	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_msg(const char *fmt, ...)$/;"	function	line:88	signature:(const char *fmt, ...)
+err_quit	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_quit(const char *fmt, ...)$/;"	function	line:102	signature:(const char *fmt, ...)
+err_time	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^void err_time(){$/;"	function	line:113
+err_doit	/home/andrea/文档/study/note/linux/apue/examples/lib/error.c	/^err_doit(int errnoflag, int error, const char *fmt, va_list ap)$/;"	function	line:123	file:	signature:(int errnoflag, int error, const char *fmt, va_list ap)
+BIGCOUNT	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^#define	BIGCOUNT	/;"	macro	line:43	file:
+op_lock	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^static struct sembuf	op_lock[2] = {$/;"	variable	line:49	typeref:struct:sembuf	file:
+op_endcreate	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^static struct sembuf	op_endcreate[2] = {$/;"	variable	line:56	typeref:struct:sembuf	file:
+op_open	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^static struct sembuf	op_open[1] = {$/;"	variable	line:63	typeref:struct:sembuf	file:
+op_close	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^static struct sembuf	op_close[3] = {$/;"	variable	line:67	typeref:struct:sembuf	file:
+op_unlock	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^static struct sembuf	op_unlock[1] = {$/;"	variable	line:73	typeref:struct:sembuf	file:
+op_op	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^static struct sembuf	op_op[1] = {$/;"	variable	line:77	typeref:struct:sembuf	file:
+sem_create	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_create(key_t key, int initval)$/;"	function	line:90	signature:(key_t key, int initval)
+sem_open	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_open(key_t key)$/;"	function	line:175	signature:(key_t key)
+sem_rm	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_rm(int id)$/;"	function	line:208	signature:(int id)
+sem_close	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_close(int id)$/;"	function	line:223	signature:(int id)
+sem_wait	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_wait(int id)$/;"	function	line:262	signature:(int id)
+sem_signal	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_signal(int id)$/;"	function	line:273	signature:(int id)
+sem_op	/home/andrea/文档/study/note/linux/apue/examples/lib/semaph.c	/^sem_op(int id, int value)$/;"	function	line:284	signature:(int id, int value)
+log_open	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_open(const char *ident, int option, int facility)$/;"	function	line:22	signature:(const char *ident, int option, int facility)
+log_ret	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_ret(const char *fmt, ...)$/;"	function	line:33	signature:(const char *fmt, ...)
+log_sys	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_sys(const char *fmt, ...)$/;"	function	line:47	signature:(const char *fmt, ...)
+log_msg	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_msg(const char *fmt, ...)$/;"	function	line:62	signature:(const char *fmt, ...)
+log_quit	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_quit(const char *fmt, ...)$/;"	function	line:76	signature:(const char *fmt, ...)
+log_exit	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_exit(int error, const char *fmt, ...)$/;"	function	line:92	signature:(int error, const char *fmt, ...)
+log_doit	/home/andrea/文档/study/note/linux/apue/examples/lib/errorlog.c	/^log_doit(int errnoflag, int error, int priority, const char *fmt,$/;"	function	line:107	file:	signature:(int errnoflag, int error, int priority, const char *fmt, va_list ap)
+set_fl	/home/andrea/文档/study/note/linux/apue/examples/lib/setfl.c	/^set_fl(int fd, int flags) \/* flags are file status flags to turn on *\/$/;"	function	line:5	signature:(int fd, int flags)
+lock_test	/home/andrea/文档/study/note/linux/apue/examples/lib/locktest.c	/^lock_test(int fd, int type, off_t offset, int whence, off_t len)$/;"	function	line:5	signature:(int fd, int type, off_t offset, int whence, off_t len)
+send_err	/home/andrea/文档/study/note/linux/apue/examples/lib/senderr.c	/^send_err(int fd, int errcode, const char *msg)$/;"	function	line:9	signature:(int fd, int errcode, const char *msg)
+sleep_us	/home/andrea/文档/study/note/linux/apue/examples/lib/sleepus.c	/^sleep_us(unsigned int nusecs)$/;"	function	line:5	signature:(unsigned int nusecs)
+fd_pipe	/home/andrea/文档/study/note/linux/apue/examples/lib/spipe.c	/^fd_pipe(int fd[2])$/;"	function	line:9	signature:(int fd[2])
+strerror	/home/andrea/文档/study/note/linux/apue/examples/lib/strerror.c	/^strerror(int error)$/;"	function	line:9	signature:(int error)
+ptym_open	/home/andrea/文档/study/note/linux/apue/examples/lib/ptyopen.c	/^ptym_open(char *pts_name, int pts_namesz)$/;"	function	line:9	signature:(char *pts_name, int pts_namesz)
+ptys_open	/home/andrea/文档/study/note/linux/apue/examples/lib/ptyopen.c	/^ptys_open(char *pts_name)$/;"	function	line:38	signature:(char *pts_name)
+save_termios	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^static struct termios		save_termios;$/;"	variable	line:5	typeref:struct:termios	file:
+ttysavefd	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^static int					ttysavefd = -1;$/;"	variable	line:6	file:
+RESET	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^static enum { RESET, RAW, CBREAK }	ttystate = RESET;$/;"	enumerator	line:7	enum:__anon1	file:
+RAW	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^static enum { RESET, RAW, CBREAK }	ttystate = RESET;$/;"	enumerator	line:7	enum:__anon1	file:
+CBREAK	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^static enum { RESET, RAW, CBREAK }	ttystate = RESET;$/;"	enumerator	line:7	enum:__anon1	file:
+ttystate	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^static enum { RESET, RAW, CBREAK }	ttystate = RESET;$/;"	variable	line:7	typeref:enum:__anon1	file:
+tty_cbreak	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^tty_cbreak(int fd)	\/* put terminal into a cbreak mode *\/$/;"	function	line:10	signature:(int fd)
+tty_raw	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^tty_raw(int fd)		\/* put terminal into a raw mode *\/$/;"	function	line:63	signature:(int fd)
+tty_reset	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^tty_reset(int fd)		\/* restore terminal's mode *\/$/;"	function	line:142	signature:(int fd)
+tty_atexit	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^tty_atexit(void)		\/* can be set up by atexit(tty_atexit) *\/$/;"	function	line:153	signature:(void)
+tty_termios	/home/andrea/文档/study/note/linux/apue/examples/lib/ttymodes.c	/^tty_termios(void)		\/* let caller see original tty state *\/$/;"	function	line:160	signature:(void)
+set_cloexec	/home/andrea/文档/study/note/linux/apue/examples/lib/setfd.c	/^set_cloexec(int fd)$/;"	function	line:5	signature:(int fd)
+pathmax	/home/andrea/文档/study/note/linux/apue/examples/lib/pathalloc.c	/^static long	pathmax = PATH_MAX;$/;"	variable	line:6	file:
+pathmax	/home/andrea/文档/study/note/linux/apue/examples/lib/pathalloc.c	/^static long	pathmax = 0;$/;"	variable	line:8	file:
+posix_version	/home/andrea/文档/study/note/linux/apue/examples/lib/pathalloc.c	/^static long	posix_version = 0;$/;"	variable	line:11	file:
+xsi_version	/home/andrea/文档/study/note/linux/apue/examples/lib/pathalloc.c	/^static long	xsi_version = 0;$/;"	variable	line:12	file:
+PATH_MAX_GUESS	/home/andrea/文档/study/note/linux/apue/examples/lib/pathalloc.c	/^#define	PATH_MAX_GUESS	/;"	macro	line:15	file:
+path_alloc	/home/andrea/文档/study/note/linux/apue/examples/lib/pathalloc.c	/^path_alloc(size_t *sizep) \/* also return allocated size, if nonnull *\/$/;"	function	line:18	signature:(size_t *sizep)
+writen	/home/andrea/文档/study/note/linux/apue/examples/lib/writen.c	/^writen(int fd, const void *ptr, size_t n)$/;"	function	line:4	signature:(int fd, const void *ptr, size_t n)
+CONTROLLEN	/home/andrea/文档/study/note/linux/apue/examples/lib/sendfd.c	/^#define	CONTROLLEN	/;"	macro	line:5	file:
+cmptr	/home/andrea/文档/study/note/linux/apue/examples/lib/sendfd.c	/^static struct cmsghdr	*cmptr = NULL;	\/* malloc'ed first time *\/$/;"	variable	line:7	typeref:struct:cmsghdr	file:
+send_fd	/home/andrea/文档/study/note/linux/apue/examples/lib/sendfd.c	/^send_fd(int fd, int fd_to_send)$/;"	function	line:14	signature:(int fd, int fd_to_send)
+BUFFSIZE	/home/andrea/文档/study/note/linux/apue/examples/signals/sigtstp.c	/^#define	BUFFSIZE	/;"	macro	line:3	file:
+sig_tstp	/home/andrea/文档/study/note/linux/apue/examples/signals/sigtstp.c	/^sig_tstp(int signo)	\/* signal handler for SIGTSTP *\/$/;"	function	line:6	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/sigtstp.c	/^main(void)$/;"	function	line:31	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/critical.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_quit	/home/andrea/文档/study/note/linux/apue/examples/signals/critical.c	/^sig_quit(int signo)$/;"	function	line:40	file:	signature:(int signo)
+my_alarm	/home/andrea/文档/study/note/linux/apue/examples/signals/reenter.c	/^my_alarm(int signo)$/;"	function	line:5	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/reenter.c	/^main(void)$/;"	function	line:16	signature:(void)
+env_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/read2.c	/^static jmp_buf	env_alrm;$/;"	variable	line:5	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/read2.c	/^main(void)$/;"	function	line:8	signature:(void)
+sig_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/read2.c	/^sig_alrm(int signo)$/;"	function	line:28	file:	signature:(int signo)
+system	/home/andrea/文档/study/note/linux/apue/examples/signals/system.c	/^system(const char *cmdstring)	\/* with appropriate signal handling *\/$/;"	function	line:7	signature:(const char *cmdstring)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+CLD	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^CLD =$/;"	macro	line:5
+CLD	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^  CLD = child$/;"	macro	line:8
+CLD	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^  CLD = child$/;"	macro	line:11
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^PROGS =	critical mask read1 read2 reenter sigtstp sigusr suspend1 suspend2$/;"	macro	line:14
+MOREPROGS	/home/andrea/文档/study/note/linux/apue/examples/signals/Makefile	/^MOREPROGS = systest2 tsleep2$/;"	macro	line:15
+sig_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/sleep1.c	/^sig_alrm(int signo)$/;"	function	line:5	file:	signature:(int signo)
+sleep1	/home/andrea/文档/study/note/linux/apue/examples/signals/sleep1.c	/^sleep1(unsigned int seconds)$/;"	function	line:11	signature:(unsigned int seconds)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/read1.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/read1.c	/^sig_alrm(int signo)$/;"	function	line:24	file:	signature:(int signo)
+quitflag	/home/andrea/文档/study/note/linux/apue/examples/signals/suspend2.c	/^volatile sig_atomic_t	quitflag;	\/* set nonzero by signal handler *\/$/;"	variable	line:3
+sig_int	/home/andrea/文档/study/note/linux/apue/examples/signals/suspend2.c	/^sig_int(int signo)	\/* one signal handler for SIGINT and SIGQUIT *\/$/;"	function	line:6	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/suspend2.c	/^main(void)$/;"	function	line:15	signature:(void)
+jmpbuf	/home/andrea/文档/study/note/linux/apue/examples/signals/mask.c	/^static sigjmp_buf				jmpbuf;$/;"	variable	line:7	file:
+canjump	/home/andrea/文档/study/note/linux/apue/examples/signals/mask.c	/^static volatile sig_atomic_t	canjump;$/;"	variable	line:8	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/mask.c	/^main(void)$/;"	function	line:11	signature:(void)
+sig_usr1	/home/andrea/文档/study/note/linux/apue/examples/signals/mask.c	/^sig_usr1(int signo)$/;"	function	line:33	file:	signature:(int signo)
+sig_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/mask.c	/^sig_alrm(int signo)$/;"	function	line:55	file:	signature:(int signo)
+SIGBAD	/home/andrea/文档/study/note/linux/apue/examples/signals/setops.c	/^#define	SIGBAD(/;"	macro	line:7	file:
+sigaddset	/home/andrea/文档/study/note/linux/apue/examples/signals/setops.c	/^sigaddset(sigset_t *set, int signo)$/;"	function	line:10	signature:(sigset_t *set, int signo)
+sigdelset	/home/andrea/文档/study/note/linux/apue/examples/signals/setops.c	/^sigdelset(sigset_t *set, int signo)$/;"	function	line:21	signature:(sigset_t *set, int signo)
+sigismember	/home/andrea/文档/study/note/linux/apue/examples/signals/setops.c	/^sigismember(const sigset_t *set, int signo)$/;"	function	line:32	signature:(const sigset_t *set, int signo)
+env_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/sleep2.c	/^static jmp_buf	env_alrm;$/;"	variable	line:5	file:
+sig_alrm	/home/andrea/文档/study/note/linux/apue/examples/signals/sleep2.c	/^sig_alrm(int signo)$/;"	function	line:8	file:	signature:(int signo)
+sleep2	/home/andrea/文档/study/note/linux/apue/examples/signals/sleep2.c	/^sleep2(unsigned int seconds)$/;"	function	line:14	signature:(unsigned int seconds)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/tsleep2.c	/^main(void)$/;"	function	line:7	signature:(void)
+sig_int	/home/andrea/文档/study/note/linux/apue/examples/signals/tsleep2.c	/^sig_int(int signo)$/;"	function	line:19	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/child.c	/^main()$/;"	function	line:7
+sig_cld	/home/andrea/文档/study/note/linux/apue/examples/signals/child.c	/^sig_cld(int signo)	\/* interrupts pause() *\/$/;"	function	line:25	file:	signature:(int signo)
+sig_int	/home/andrea/文档/study/note/linux/apue/examples/signals/systest2.c	/^sig_int(int signo)$/;"	function	line:4	file:	signature:(int signo)
+sig_chld	/home/andrea/文档/study/note/linux/apue/examples/signals/systest2.c	/^sig_chld(int signo)$/;"	function	line:10	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/systest2.c	/^main(void)$/;"	function	line:16	signature:(void)
+abort	/home/andrea/文档/study/note/linux/apue/examples/signals/abort.c	/^abort(void)			\/* POSIX-style abort() function *\/$/;"	function	line:7	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/suspend1.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_int	/home/andrea/文档/study/note/linux/apue/examples/signals/suspend1.c	/^sig_int(int signo)$/;"	function	line:53	file:	signature:(int signo)
+BUFFSIZE	/home/andrea/文档/study/note/linux/apue/examples/pty/loop.c	/^#define	BUFFSIZE	/;"	macro	line:3	file:
+sigcaught	/home/andrea/文档/study/note/linux/apue/examples/pty/loop.c	/^static volatile sig_atomic_t	sigcaught;	\/* set by signal handler *\/$/;"	variable	line:6	file:
+loop	/home/andrea/文档/study/note/linux/apue/examples/pty/loop.c	/^loop(int ptym, int ignoreeof)$/;"	function	line:9	signature:(int ptym, int ignoreeof)
+sig_term	/home/andrea/文档/study/note/linux/apue/examples/pty/loop.c	/^sig_term(int signo)$/;"	function	line:67	file:	signature:(int signo)
+do_driver	/home/andrea/文档/study/note/linux/apue/examples/pty/driver.c	/^do_driver(char *driver)$/;"	function	line:4	signature:(char *driver)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/pty/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/pty/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/pty/Makefile	/^  EXTRALIBS=-lsocket -lnsl$/;"	macro	line:6
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/pty/Makefile	/^PROGS =	pty$/;"	macro	line:9
+OPTSTR	/home/andrea/文档/study/note/linux/apue/examples/pty/main.c	/^#define OPTSTR /;"	macro	line:5	file:
+OPTSTR	/home/andrea/文档/study/note/linux/apue/examples/pty/main.c	/^#define OPTSTR /;"	macro	line:7	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/pty/main.c	/^main(int argc, char *argv[])$/;"	function	line:15	signature:(int argc, char *argv[])
+set_noecho	/home/andrea/文档/study/note/linux/apue/examples/pty/main.c	/^set_noecho(int fd)		\/* turn off echo (for slave pty) *\/$/;"	function	line:104	file:	signature:(int fd)
+main	/home/andrea/文档/study/note/linux/apue/examples/advio/mandatory.c	/^main(int argc, char *argv[])$/;"	function	line:7	signature:(int argc, char *argv[])
+COPYINCR	/home/andrea/文档/study/note/linux/apue/examples/advio/mcopy2.c	/^#define COPYINCR /;"	macro	line:5	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/advio/mcopy2.c	/^main(int argc, char *argv[])$/;"	function	line:8	signature:(int argc, char *argv[])
+buf	/home/andrea/文档/study/note/linux/apue/examples/advio/nonblockw.c	/^char	buf[500000];$/;"	variable	line:5
+main	/home/andrea/文档/study/note/linux/apue/examples/advio/nonblockw.c	/^main(void)$/;"	function	line:8	signature:(void)
+lockfile	/home/andrea/文档/study/note/linux/apue/examples/advio/lockfile.c	/^lockfile(int fd)$/;"	function	line:5	signature:(int fd)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/advio/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/advio/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/advio/Makefile	/^  EXTRALIBS=-lrt$/;"	macro	line:6
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/advio/Makefile	/^  EXTRALIBS=-lrt$/;"	macro	line:9
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/advio/Makefile	/^PROGS =	deadlock mandatory mcopy2 nonblockw rot13a$/;"	macro	line:12
+MOREPROGS	/home/andrea/文档/study/note/linux/apue/examples/advio/Makefile	/^MOREPROGS = rot13c2$/;"	macro	line:13
+readn	/home/andrea/文档/study/note/linux/apue/examples/advio/readn.c	/^readn(int fd, void *ptr, size_t n)$/;"	function	line:4	signature:(int fd, void *ptr, size_t n)
+BSZ	/home/andrea/文档/study/note/linux/apue/examples/advio/rot13a.c	/^#define BSZ /;"	macro	line:5	file:
+buf	/home/andrea/文档/study/note/linux/apue/examples/advio/rot13a.c	/^unsigned char buf[BSZ];$/;"	variable	line:7
+translate	/home/andrea/文档/study/note/linux/apue/examples/advio/rot13a.c	/^translate(unsigned char c)$/;"	function	line:10	signature:(unsigned char c)
+main	/home/andrea/文档/study/note/linux/apue/examples/advio/rot13a.c	/^main(int argc, char* argv[])$/;"	function	line:26	signature:(int argc, char* argv[])
+lockabyte	/home/andrea/文档/study/note/linux/apue/examples/advio/deadlock.c	/^lockabyte(const char *name, int fd, off_t offset)$/;"	function	line:5	file:	signature:(const char *name, int fd, off_t offset)
+main	/home/andrea/文档/study/note/linux/apue/examples/advio/deadlock.c	/^main(void)$/;"	function	line:13	signature:(void)
+writen	/home/andrea/文档/study/note/linux/apue/examples/advio/writen.c	/^writen(int fd, const void *ptr, size_t n)$/;"	function	line:4	signature:(int fd, const void *ptr, size_t n)
+childpid	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen.c	/^static pid_t	*childpid = NULL;$/;"	variable	line:9	file:
+maxfd	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen.c	/^static int		maxfd;$/;"	variable	line:14	file:
+popen	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen.c	/^popen(const char *cmdstring, const char *type)$/;"	function	line:17	signature:(const char *cmdstring, const char *type)
+pclose	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen.c	/^pclose(FILE *fp)$/;"	function	line:88	signature:(FILE *fp)
+NLOOPS	/home/andrea/文档/study/note/linux/apue/examples/ipc1/devzero.c	/^#define	NLOOPS	/;"	macro	line:5	file:
+SIZE	/home/andrea/文档/study/note/linux/apue/examples/ipc1/devzero.c	/^#define	SIZE	/;"	macro	line:6	file:
+update	/home/andrea/文档/study/note/linux/apue/examples/ipc1/devzero.c	/^update(long *ptr)$/;"	function	line:9	file:	signature:(long *ptr)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/devzero.c	/^main(void)$/;"	function	line:15	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/pipe4.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_pipe	/home/andrea/文档/study/note/linux/apue/examples/ipc1/pipe4.c	/^sig_pipe(int signo)$/;"	function	line:63	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/add2.c	/^main(void)$/;"	function	line:4	signature:(void)
+ARRAY_SIZE	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tshm.c	/^#define	ARRAY_SIZE	/;"	macro	line:4	file:
+MALLOC_SIZE	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tshm.c	/^#define	MALLOC_SIZE	/;"	macro	line:5	file:
+SHM_SIZE	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tshm.c	/^#define	SHM_SIZE	/;"	macro	line:6	file:
+SHM_MODE	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tshm.c	/^#define	SHM_MODE	/;"	macro	line:7	file:
+array	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tshm.c	/^char	array[ARRAY_SIZE];	\/* uninitialized data = bss *\/$/;"	variable	line:9
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tshm.c	/^main(void)$/;"	function	line:12	signature:(void)
+DEF_PAGER	/home/andrea/文档/study/note/linux/apue/examples/ipc1/pipe2.c	/^#define	DEF_PAGER	/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/pipe2.c	/^main(int argc, char *argv[])$/;"	function	line:7	signature:(int argc, char *argv[])
+pfd1	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^static int	pfd1[2], pfd2[2];$/;"	variable	line:3	file:
+pfd2	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^static int	pfd1[2], pfd2[2];$/;"	variable	line:3	file:
+TELL_WAIT	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^TELL_WAIT(void)$/;"	function	line:6	signature:(void)
+TELL_PARENT	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^TELL_PARENT(pid_t pid)$/;"	function	line:13	signature:(pid_t pid)
+WAIT_PARENT	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^WAIT_PARENT(void)$/;"	function	line:20	signature:(void)
+TELL_CHILD	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^TELL_CHILD(pid_t pid)$/;"	function	line:32	signature:(pid_t pid)
+WAIT_CHILD	/home/andrea/文档/study/note/linux/apue/examples/ipc1/tellwait.c	/^WAIT_CHILD(void)$/;"	function	line:39	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/ipc1/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/ipc1/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/ipc1/Makefile	/^PROGS =	add2 add2stdio devzero myuclc pipe1 pipe2 pipe4 popen1 popen2 tshm$/;"	macro	line:5
+PAGER	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen2.c	/^#define	PAGER	/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen2.c	/^main(int argc, char *argv[])$/;"	function	line:7	signature:(int argc, char *argv[])
+s_alloc	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.c	/^s_alloc()$/;"	function	line:8
+s_free	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.c	/^s_free(struct slock *sp)$/;"	function	line:29	signature:(struct slock *sp)
+s_lock	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.c	/^s_lock(struct slock *sp)$/;"	function	line:36	signature:(struct slock *sp)
+s_trylock	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.c	/^s_trylock(struct slock *sp)$/;"	function	line:42	signature:(struct slock *sp)
+s_unlock	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.c	/^s_unlock(struct slock *sp)$/;"	function	line:48	signature:(struct slock *sp)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/add2stdio.c	/^main(void)$/;"	function	line:4	signature:(void)
+slock	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.h	/^struct slock {$/;"	struct	line:6
+semp	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.h	/^	sem_t *semp;$/;"	member	line:7	struct:slock
+name	/home/andrea/文档/study/note/linux/apue/examples/ipc1/slock.h	/^	char name[_POSIX_NAME_MAX];$/;"	member	line:8	struct:slock
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/pipe1.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/myuclc.c	/^main(void)$/;"	function	line:5	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc1/popen1.c	/^main(void)$/;"	function	line:5	signature:(void)
+initserver	/home/andrea/文档/study/note/linux/apue/examples/sockets/initsrv1.c	/^initserver(int type, const struct sockaddr *addr, socklen_t alen,$/;"	function	line:6	signature:(int type, const struct sockaddr *addr, socklen_t alen, int qlen)
+BUFLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime-dg.c	/^#define BUFLEN	/;"	macro	line:6	file:
+TIMEOUT	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime-dg.c	/^#define TIMEOUT	/;"	macro	line:7	file:
+sigalrm	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime-dg.c	/^sigalrm(int signo)$/;"	function	line:10	signature:(int signo)
+print_uptime	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime-dg.c	/^print_uptime(int sockfd, struct addrinfo *aip)$/;"	function	line:15	signature:(int sockfd, struct addrinfo *aip)
+main	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime-dg.c	/^main(int argc, char *argv[])$/;"	function	line:34	signature:(int argc, char *argv[])
+BUFLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime.c	/^#define BUFLEN	/;"	macro	line:6	file:
+print_uptime	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime.c	/^print_uptime(int sockfd)$/;"	function	line:12	signature:(int sockfd)
+main	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptime.c	/^main(int argc, char *argv[])$/;"	function	line:24	signature:(int argc, char *argv[])
+print_family	/home/andrea/文档/study/note/linux/apue/examples/sockets/findsvc.c	/^print_family(struct addrinfo *aip)$/;"	function	line:13	signature:(struct addrinfo *aip)
+print_type	/home/andrea/文档/study/note/linux/apue/examples/sockets/findsvc.c	/^print_type(struct addrinfo *aip)$/;"	function	line:35	signature:(struct addrinfo *aip)
+print_protocol	/home/andrea/文档/study/note/linux/apue/examples/sockets/findsvc.c	/^print_protocol(struct addrinfo *aip)$/;"	function	line:57	signature:(struct addrinfo *aip)
+print_flags	/home/andrea/文档/study/note/linux/apue/examples/sockets/findsvc.c	/^print_flags(struct addrinfo *aip)$/;"	function	line:79	signature:(struct addrinfo *aip)
+main	/home/andrea/文档/study/note/linux/apue/examples/sockets/findsvc.c	/^main(int argc, char *argv[])$/;"	function	line:101	signature:(int argc, char *argv[])
+BUFLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-dg.c	/^#define BUFLEN	/;"	macro	line:7	file:
+MAXADDRLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-dg.c	/^#define MAXADDRLEN	/;"	macro	line:8	file:
+HOST_NAME_MAX	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-dg.c	/^#define HOST_NAME_MAX /;"	macro	line:11	file:
+serve	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-dg.c	/^serve(int sockfd)$/;"	function	line:17	signature:(int sockfd)
+main	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-dg.c	/^main(int argc, char *argv[])$/;"	function	line:46	signature:(int argc, char *argv[])
+initserver	/home/andrea/文档/study/note/linux/apue/examples/sockets/initsrv2.c	/^initserver(int type, const struct sockaddr *addr, socklen_t alen,$/;"	function	line:6	signature:(int type, const struct sockaddr *addr, socklen_t alen, int qlen)
+QLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-fd.c	/^#define QLEN /;"	macro	line:9	file:
+HOST_NAME_MAX	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-fd.c	/^#define HOST_NAME_MAX /;"	macro	line:12	file:
+serve	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-fd.c	/^serve(int sockfd)$/;"	function	line:18	signature:(int sockfd)
+main	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed-fd.c	/^main(int argc, char *argv[])$/;"	function	line:59	signature:(int argc, char *argv[])
+MAXSLEEP	/home/andrea/文档/study/note/linux/apue/examples/sockets/clconn2.c	/^#define MAXSLEEP /;"	macro	line:4	file:
+connect_retry	/home/andrea/文档/study/note/linux/apue/examples/sockets/clconn2.c	/^connect_retry(int domain, int type, int protocol,$/;"	function	line:7	signature:(int domain, int type, int protocol, const struct sockaddr *addr, socklen_t alen)
+BUFLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed.c	/^#define BUFLEN	/;"	macro	line:7	file:
+QLEN	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed.c	/^#define QLEN /;"	macro	line:8	file:
+HOST_NAME_MAX	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed.c	/^#define HOST_NAME_MAX /;"	macro	line:11	file:
+serve	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed.c	/^serve(int sockfd)$/;"	function	line:17	signature:(int sockfd)
+main	/home/andrea/文档/study/note/linux/apue/examples/sockets/ruptimed.c	/^main(int argc, char *argv[])$/;"	function	line:44	signature:(int argc, char *argv[])
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/sockets/makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/sockets/makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/sockets/makefile	/^  EXTRALIBS = -lsocket -lnsl$/;"	macro	line:6
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/sockets/makefile	/^PROGS = ruptime ruptimed ruptimed-fd ruptimed-dg$/;"	macro	line:9
+MOREPROGS	/home/andrea/文档/study/note/linux/apue/examples/sockets/makefile	/^MOREPROGS = findsvc ruptime-dg$/;"	macro	line:10
+MAXSLEEP	/home/andrea/文档/study/note/linux/apue/examples/sockets/clconn.c	/^#define MAXSLEEP /;"	macro	line:4	file:
+connect_retry	/home/andrea/文档/study/note/linux/apue/examples/sockets/clconn.c	/^connect_retry(int sockfd, const struct sockaddr *addr, socklen_t alen)$/;"	function	line:7	signature:(int sockfd, const struct sockaddr *addr, socklen_t alen)
+reread	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread2.c	/^reread(void)$/;"	function	line:9	signature:(void)
+sigterm	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread2.c	/^sigterm(int signo)$/;"	function	line:15	signature:(int signo)
+sighup	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread2.c	/^sighup(int signo)$/;"	function	line:22	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread2.c	/^main(int argc, char *argv[])$/;"	function	line:29	signature:(int argc, char *argv[])
+daemonize	/home/andrea/文档/study/note/linux/apue/examples/daemons/init.c	/^daemonize(const char *cmd)$/;"	function	line:7	signature:(const char *cmd)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/daemons/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/daemons/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+LOCKFILE	/home/andrea/文档/study/note/linux/apue/examples/daemons/single.c	/^#define LOCKFILE /;"	macro	line:10	file:
+LOCKMODE	/home/andrea/文档/study/note/linux/apue/examples/daemons/single.c	/^#define LOCKMODE /;"	macro	line:11	file:
+already_running	/home/andrea/文档/study/note/linux/apue/examples/daemons/single.c	/^already_running(void)$/;"	function	line:16	signature:(void)
+mask	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread.c	/^sigset_t	mask;$/;"	variable	line:5
+reread	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread.c	/^reread(void)$/;"	function	line:10	signature:(void)
+thr_fn	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread.c	/^thr_fn(void *arg)$/;"	function	line:16	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/daemons/reread.c	/^main(int argc, char *argv[])$/;"	function	line:45	signature:(int argc, char *argv[])
+globvar	/home/andrea/文档/study/note/linux/apue/examples/proc/vfork1.c	/^int		globvar = 6;		\/* external variable in initialized data *\/$/;"	variable	line:3
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/vfork1.c	/^main(void)$/;"	function	line:6	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/fork2.c	/^main(void)$/;"	function	line:5	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/times1.c	/^main(int argc, char *argv[])$/;"	function	line:8	signature:(int argc, char *argv[])
+do_cmd	/home/andrea/文档/study/note/linux/apue/examples/proc/times1.c	/^do_cmd(char *cmd)		\/* execute and time the "cmd" *\/$/;"	function	line:19	file:	signature:(char *cmd)
+pr_times	/home/andrea/文档/study/note/linux/apue/examples/proc/times1.c	/^pr_times(clock_t real, struct tms *tmsstart, struct tms *tmsend)$/;"	function	line:41	file:	signature:(clock_t real, struct tms *tmsstart, struct tms *tmsend)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/test1.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/wait1.c	/^main(void)$/;"	function	line:5	signature:(void)
+system	/home/andrea/文档/study/note/linux/apue/examples/proc/system.c	/^system(const char *cmdstring)	\/* version without signal handling *\/$/;"	function	line:6	signature:(const char *cmdstring)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+ACCT	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^ACCT=$/;"	macro	line:5
+ACCTFLAGS	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^ACCTFLAGS=$/;"	macro	line:6
+ACCT	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^  ACCT=pracct$/;"	macro	line:8
+ACCTFLAGS	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^  ACCTFLAGS = -DHAS_AXSIG -DHAS_ACORE$/;"	macro	line:9
+ACCT	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^  ACCT=pracct$/;"	macro	line:12
+ACCTFLAGS	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^  ACCTFLAGS = -DHAS_AXSIG -DHAS_ACORE$/;"	macro	line:13
+ACCT	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^  ACCT=pracct$/;"	macro	line:16
+ACCTFLAGS	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^  ACCTFLAGS = -DHAS_AC_STAT$/;"	macro	line:17
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^PROGS =	echoall exec1 exec2 fork1 fork2 nice pruids tellwait1 tellwait2 test1 times1 vfork1 wait1$/;"	macro	line:20
+MOREPROGS	/home/andrea/文档/study/note/linux/apue/examples/proc/Makefile	/^MOREPROGS = systest1 systest3$/;"	macro	line:21
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/systest1.c	/^main(void)$/;"	function	line:5	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/tellwait2.c	/^main(void)$/;"	function	line:6	signature:(void)
+charatatime	/home/andrea/文档/study/note/linux/apue/examples/proc/tellwait2.c	/^charatatime(char *str)$/;"	function	line:25	file:	signature:(char *str)
+globvar	/home/andrea/文档/study/note/linux/apue/examples/proc/fork1.c	/^int		globvar = 6;		\/* external variable in initialized data *\/$/;"	variable	line:3
+buf	/home/andrea/文档/study/note/linux/apue/examples/proc/fork1.c	/^char	buf[] = "a write to stdout\\n";$/;"	variable	line:4
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/fork1.c	/^main(void)$/;"	function	line:7	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/exec2.c	/^main(void)$/;"	function	line:5	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/echoall.c	/^main(int argc, char *argv[])$/;"	function	line:4	signature:(int argc, char *argv[])
+acct	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define acct /;"	macro	line:5	file:
+ac_flag	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define ac_flag /;"	macro	line:6	file:
+FMT	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define FMT /;"	macro	line:7	file:
+FMT	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define FMT /;"	macro	line:9	file:
+FMT	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define FMT /;"	macro	line:11	file:
+acct	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define acct /;"	macro	line:14	file:
+ACORE	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define ACORE /;"	macro	line:18	file:
+AXSIG	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^#define AXSIG /;"	macro	line:21	file:
+compt2ulong	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^compt2ulong(comp_t comptime)	\/* convert comp_t to unsigned long *\/$/;"	function	line:26	file:	signature:(comp_t comptime)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/pracct.c	/^main(int argc, char *argv[])$/;"	function	line:40	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/tellwait1.c	/^main(void)$/;"	function	line:7	signature:(void)
+charatatime	/home/andrea/文档/study/note/linux/apue/examples/proc/tellwait1.c	/^charatatime(char *str)$/;"	function	line:25	file:	signature:(char *str)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/pruids.c	/^main(void)$/;"	function	line:4	signature:(void)
+count	/home/andrea/文档/study/note/linux/apue/examples/proc/nice.c	/^unsigned long long count;$/;"	variable	line:13
+end	/home/andrea/文档/study/note/linux/apue/examples/proc/nice.c	/^struct timeval end;$/;"	variable	line:14	typeref:struct:timeval
+checktime	/home/andrea/文档/study/note/linux/apue/examples/proc/nice.c	/^checktime(char *str)$/;"	function	line:17	signature:(char *str)
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/nice.c	/^main(int argc, char *argv[])$/;"	function	line:29	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/systest3.c	/^main(int argc, char *argv[])$/;"	function	line:4	signature:(int argc, char *argv[])
+env_init	/home/andrea/文档/study/note/linux/apue/examples/proc/exec1.c	/^char	*env_init[] = { "USER=unknown", "PATH=\/tmp", NULL };$/;"	variable	line:4
+main	/home/andrea/文档/study/note/linux/apue/examples/proc/exec1.c	/^main(void)$/;"	function	line:7	signature:(void)
+DIRS	/home/andrea/文档/study/note/linux/apue/examples/Makefile	/^DIRS = lib intro sockets advio daemons datafiles db environ \\$/;"	macro	line:1
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/datafiles/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/datafiles/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/datafiles/Makefile	/^PROGS =	strftime$/;"	macro	line:5
+getpwnam	/home/andrea/文档/study/note/linux/apue/examples/datafiles/getpwnam.c	/^getpwnam(const char *name)$/;"	function	line:6	signature:(const char *name)
+main	/home/andrea/文档/study/note/linux/apue/examples/datafiles/strftime.c	/^main(void)$/;"	function	line:6	signature:(void)
+TOK_ADD	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd2.c	/^#define	TOK_ADD	/;"	macro	line:4	file:
+jmpbuffer	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd2.c	/^jmp_buf	jmpbuffer;$/;"	variable	line:6
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd2.c	/^main(void)$/;"	function	line:9	signature:(void)
+cmd_add	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd2.c	/^cmd_add(void)$/;"	function	line:23	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/hello1.c	/^main()$/;"	function	line:3
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/environ/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/environ/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/environ/Makefile	/^PROGS = doatexit echoarg getrlimit hello1 testjmp$/;"	macro	line:5
+f1	/home/andrea/文档/study/note/linux/apue/examples/environ/scope.c	/^f1(int val)$/;"	function	line:2	signature:(int val)
+doit	/home/andrea/文档/study/note/linux/apue/examples/environ/getrlimit.c	/^#define	doit(/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/getrlimit.c	/^main(void)$/;"	function	line:9	signature:(void)
+pr_limits	/home/andrea/文档/study/note/linux/apue/examples/environ/getrlimit.c	/^pr_limits(char *name, int resource)$/;"	function	line:68	file:	signature:(char *name, int resource)
+jmpbuffer	/home/andrea/文档/study/note/linux/apue/examples/environ/testjmp.c	/^static jmp_buf	jmpbuffer;$/;"	variable	line:7	file:
+globval	/home/andrea/文档/study/note/linux/apue/examples/environ/testjmp.c	/^static int		globval;$/;"	variable	line:8	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/testjmp.c	/^main(void)$/;"	function	line:11	signature:(void)
+f1	/home/andrea/文档/study/note/linux/apue/examples/environ/testjmp.c	/^f1(int i, int j, int k, int l)$/;"	function	line:39	file:	signature:(int i, int j, int k, int l)
+f2	/home/andrea/文档/study/note/linux/apue/examples/environ/testjmp.c	/^f2(void)$/;"	function	line:48	file:	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/echoarg.c	/^main(int argc, char *argv[])$/;"	function	line:4	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/doatexit.c	/^main(void)$/;"	function	line:7	signature:(void)
+my_exit1	/home/andrea/文档/study/note/linux/apue/examples/environ/doatexit.c	/^my_exit1(void)$/;"	function	line:22	file:	signature:(void)
+my_exit2	/home/andrea/文档/study/note/linux/apue/examples/environ/doatexit.c	/^my_exit2(void)$/;"	function	line:28	file:	signature:(void)
+open_data	/home/andrea/文档/study/note/linux/apue/examples/environ/opendata.c	/^open_data(void)$/;"	function	line:4	signature:(void)
+TOK_ADD	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd1.c	/^#define	TOK_ADD	/;"	macro	line:3	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd1.c	/^main(void)$/;"	function	line:10	signature:(void)
+tok_ptr	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd1.c	/^char	*tok_ptr;		\/* global pointer for get_token() *\/$/;"	variable	line:19
+do_line	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd1.c	/^do_line(char *ptr)		\/* process one line of input *\/$/;"	function	line:22	signature:(char *ptr)
+cmd_add	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd1.c	/^cmd_add(void)$/;"	function	line:37	signature:(void)
+get_token	/home/andrea/文档/study/note/linux/apue/examples/environ/cmd1.c	/^get_token(void)$/;"	function	line:46	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+LIBMISC	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^LIBMISC	= libapue_db.a$/;"	macro	line:5
+COMM_OBJ	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^COMM_OBJ = db.o$/;"	macro	line:6
+LDCMD	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^  LDCMD=$(LD) -64 -G -Bdynamic -R\/lib\/64:\/usr\/ucblib\/sparcv9 -o libapue_db.so.1 -L\/lib\/64 -L\/usr\/ucblib\/sparcv9 -L$(ROOT)\/lib -lapue db.o$/;"	macro	line:9
+EXTRALD	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^  EXTRALD=-m64 -R.$/;"	macro	line:10
+LDCMD	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^  LDCMD=$(CC) -shared -Wl,-dylib -o libapue_db.so.1 -L$(ROOT)\/lib -lapue -lc db.o$/;"	macro	line:12
+EXTRALD	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^  EXTRALD=-Wl,-rpath=.$/;"	macro	line:15
+EXTRALD	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^  EXTRALD=-R.$/;"	macro	line:18
+EXTRALD	/home/andrea/文档/study/note/linux/apue/examples/db/Makefile	/^  EXTRALD=-R.$/;"	macro	line:21
+IDXLEN_SZ	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define IDXLEN_SZ	/;"	macro	line:13	file:
+SEP	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define SEP /;"	macro	line:14	file:
+SPACE	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define SPACE /;"	macro	line:15	file:
+NEWLINE	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define NEWLINE /;"	macro	line:16	file:
+PTR_SZ	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define PTR_SZ /;"	macro	line:22	file:
+PTR_MAX	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define PTR_MAX /;"	macro	line:23	file:
+NHASH_DEF	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define NHASH_DEF	/;"	macro	line:24	file:
+FREE_OFF	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define FREE_OFF /;"	macro	line:25	file:
+HASH_OFF	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^#define HASH_OFF /;"	macro	line:26	file:
+DBHASH	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^typedef unsigned long	DBHASH;	\/* hash values *\/$/;"	typedef	line:28	file:
+COUNT	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^typedef unsigned long	COUNT;	\/* unsigned counter *\/$/;"	typedef	line:29	file:
+idxfd	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  int    idxfd;  \/* fd for index file *\/$/;"	member	line:35	struct:__anon2	file:
+datfd	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  int    datfd;  \/* fd for data file *\/$/;"	member	line:36	struct:__anon2	file:
+idxbuf	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  char  *idxbuf; \/* malloc'ed buffer for index record *\/$/;"	member	line:37	struct:__anon2	file:
+datbuf	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  char  *datbuf; \/* malloc'ed buffer for data record*\/$/;"	member	line:38	struct:__anon2	file:
+name	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  char  *name;   \/* name db was opened under *\/$/;"	member	line:39	struct:__anon2	file:
+idxoff	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  off_t  idxoff; \/* offset in index file of index record *\/$/;"	member	line:40	struct:__anon2	file:
+idxlen	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  size_t idxlen; \/* length of index record *\/$/;"	member	line:42	struct:__anon2	file:
+datoff	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  off_t  datoff; \/* offset in data file of data record *\/$/;"	member	line:45	struct:__anon2	file:
+datlen	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  size_t datlen; \/* length of data record *\/$/;"	member	line:46	struct:__anon2	file:
+ptrval	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  off_t  ptrval; \/* contents of chain ptr in index record *\/$/;"	member	line:48	struct:__anon2	file:
+ptroff	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  off_t  ptroff; \/* chain ptr offset pointing to this idx record *\/$/;"	member	line:49	struct:__anon2	file:
+chainoff	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  off_t  chainoff; \/* offset of hash chain for this index record *\/$/;"	member	line:50	struct:__anon2	file:
+hashoff	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  off_t  hashoff;  \/* offset in index file of hash table *\/$/;"	member	line:51	struct:__anon2	file:
+nhash	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  DBHASH nhash;    \/* current hash table size *\/$/;"	member	line:52	struct:__anon2	file:
+cnt_delok	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_delok;    \/* delete OK *\/$/;"	member	line:53	struct:__anon2	file:
+cnt_delerr	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_delerr;   \/* delete error *\/$/;"	member	line:54	struct:__anon2	file:
+cnt_fetchok	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_fetchok;  \/* fetch OK *\/$/;"	member	line:55	struct:__anon2	file:
+cnt_fetcherr	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_fetcherr; \/* fetch error *\/$/;"	member	line:56	struct:__anon2	file:
+cnt_nextrec	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_nextrec;  \/* nextrec *\/$/;"	member	line:57	struct:__anon2	file:
+cnt_stor1	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_stor1;    \/* store: DB_INSERT, no empty, appended *\/$/;"	member	line:58	struct:__anon2	file:
+cnt_stor2	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_stor2;    \/* store: DB_INSERT, found empty, reused *\/$/;"	member	line:59	struct:__anon2	file:
+cnt_stor3	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_stor3;    \/* store: DB_REPLACE, diff len, appended *\/$/;"	member	line:60	struct:__anon2	file:
+cnt_stor4	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_stor4;    \/* store: DB_REPLACE, same len, overwrote *\/$/;"	member	line:61	struct:__anon2	file:
+cnt_storerr	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^  COUNT  cnt_storerr;  \/* store error *\/$/;"	member	line:62	struct:__anon2	file:
+DB	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^} DB;$/;"	typedef	line:63	typeref:struct:__anon2	file:
+db_open	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_open(const char *pathname, int oflag, ...)$/;"	function	line:85	signature:(const char *pathname, int oflag, ...)
+_db_alloc	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_alloc(int namelen)$/;"	function	line:172	file:	signature:(int namelen)
+db_close	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_close(DBHANDLE h)$/;"	function	line:205	signature:(DBHANDLE h)
+_db_free	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_free(DB *db)$/;"	function	line:215	file:	signature:(DB *db)
+db_fetch	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_fetch(DBHANDLE h, const char *key)$/;"	function	line:234	signature:(DBHANDLE h, const char *key)
+_db_find_and_lock	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_find_and_lock(DB *db, const char *key, int writelock)$/;"	function	line:260	file:	signature:(DB *db, const char *key, int writelock)
+_db_hash	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_hash(DB *db, const char *key)$/;"	function	line:307	file:	signature:(DB *db, const char *key)
+_db_readptr	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_readptr(DB *db, off_t offset)$/;"	function	line:324	file:	signature:(DB *db, off_t offset)
+_db_readidx	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_readidx(DB *db, off_t offset)$/;"	function	line:344	file:	signature:(DB *db, off_t offset)
+_db_readdat	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_readdat(DB *db)$/;"	function	line:425	file:	signature:(DB *db)
+db_delete	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_delete(DBHANDLE h, const char *key)$/;"	function	line:441	signature:(DBHANDLE h, const char *key)
+_db_dodelete	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_dodelete(DB *db)$/;"	function	line:464	file:	signature:(DB *db)
+_db_writedat	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_writedat(DB *db, const char *data, off_t offset, int whence)$/;"	function	line:532	file:	signature:(DB *db, const char *data, off_t offset, int whence)
+_db_writeidx	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_writeidx(DB *db, const char *key,$/;"	function	line:568	file:	signature:(DB *db, const char *key, off_t offset, int whence, off_t ptrval)
+_db_writeptr	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_writeptr(DB *db, off_t offset, off_t ptrval)$/;"	function	line:619	file:	signature:(DB *db, off_t offset, off_t ptrval)
+db_store	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_store(DBHANDLE h, const char *key, const char *data, int flag)$/;"	function	line:638	signature:(DBHANDLE h, const char *key, const char *data, int flag)
+_db_findfree	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^_db_findfree(DB *db, int keylen, int datlen)$/;"	function	line:753	file:	signature:(DB *db, int keylen, int datlen)
+db_rewind	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_rewind(DBHANDLE h)$/;"	function	line:813	signature:(DBHANDLE h)
+db_nextrec	/home/andrea/文档/study/note/linux/apue/examples/db/db.c	/^db_nextrec(DBHANDLE h, char *key)$/;"	function	line:836	signature:(DBHANDLE h, char *key)
+_APUE_DB_H	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define _APUE_DB_H$/;"	macro	line:2
+DBHANDLE	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^typedef	void *	DBHANDLE;$/;"	typedef	line:4
+DB_INSERT	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define DB_INSERT	/;"	macro	line:17
+DB_REPLACE	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define DB_REPLACE	/;"	macro	line:18
+DB_STORE	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define DB_STORE	/;"	macro	line:19
+IDXLEN_MIN	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define IDXLEN_MIN	/;"	macro	line:24
+IDXLEN_MAX	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define IDXLEN_MAX	/;"	macro	line:25
+DATLEN_MIN	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define DATLEN_MIN	/;"	macro	line:26
+DATLEN_MAX	/home/andrea/文档/study/note/linux/apue/examples/db/apue_db.h	/^#define DATLEN_MAX	/;"	macro	line:27
+main	/home/andrea/文档/study/note/linux/apue/examples/db/t4.c	/^main(void)$/;"	function	line:6	signature:(void)
+MAXCFGLINE	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^#define MAXCFGLINE /;"	macro	line:6	file:
+MAXKWLEN	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^#define MAXKWLEN /;"	macro	line:7	file:
+MAXFMTLEN	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^#define MAXFMTLEN /;"	macro	line:8	file:
+getaddrlist	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^getaddrlist(const char *host, const char *service,$/;"	function	line:19	signature:(const char *host, const char *service, struct addrinfo **ailistpp)
+scan_configfile	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^scan_configfile(char *keyword)$/;"	function	line:44	file:	signature:(char *keyword)
+get_printserver	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^get_printserver(void)$/;"	function	line:76	signature:(void)
+get_printaddr	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^get_printaddr(void)$/;"	function	line:87	signature:(void)
+tread	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^tread(int fd, void *buf, size_t nbytes, unsigned int timout)$/;"	function	line:112	signature:(int fd, void *buf, size_t nbytes, unsigned int timout)
+treadn	/home/andrea/文档/study/note/linux/apue/examples/printer/util.c	/^treadn(int fd, void *buf, size_t nbytes, unsigned int timout)$/;"	function	line:139	signature:(int fd, void *buf, size_t nbytes, unsigned int timout)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRA	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^EXTRA=$/;"	macro	line:4
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^  EXTRALIBS=-lsocket -lnsl -lrt -lpthread$/;"	macro	line:7
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:9
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^PROGS = print printd$/;"	macro	line:12
+HDRS	/home/andrea/文档/study/note/linux/apue/examples/printer/Makefile	/^HDRS = print.h ipp.h$/;"	macro	line:13
+log_to_stderr	/home/andrea/文档/study/note/linux/apue/examples/printer/print.c	/^int log_to_stderr = 1;$/;"	variable	line:14
+main	/home/andrea/文档/study/note/linux/apue/examples/printer/print.c	/^main(int argc, char *argv[])$/;"	function	line:19	signature:(int argc, char *argv[])
+submit_file	/home/andrea/文档/study/note/linux/apue/examples/printer/print.c	/^submit_file(int fd, int sockfd, const char *fname, size_t nbytes,$/;"	function	line:72	signature:(int fd, int sockfd, const char *fname, size_t nbytes, int text)
+_IPP_H	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define _IPP_H$/;"	macro	line:2
+STATCLASS_OK	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STATCLASS_OK(/;"	macro	line:12
+STATCLASS_INFO	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STATCLASS_INFO(/;"	macro	line:13
+STATCLASS_REDIR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STATCLASS_REDIR(/;"	macro	line:14
+STATCLASS_CLIERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STATCLASS_CLIERR(/;"	macro	line:15
+STATCLASS_SRVERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STATCLASS_SRVERR(/;"	macro	line:16
+STAT_OK	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_OK /;"	macro	line:21
+STAT_OK_ATTRIGN	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_OK_ATTRIGN /;"	macro	line:22
+STAT_OK_ATTRCON	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_OK_ATTRCON /;"	macro	line:23
+STAT_CLI_BADREQ	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_BADREQ /;"	macro	line:25
+STAT_CLI_FORBID	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_FORBID /;"	macro	line:26
+STAT_CLI_NOAUTH	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOAUTH /;"	macro	line:27
+STAT_CLI_NOPERM	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOPERM /;"	macro	line:28
+STAT_CLI_NOTPOS	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOTPOS /;"	macro	line:29
+STAT_CLI_TIMOUT	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_TIMOUT /;"	macro	line:30
+STAT_CLI_NOTFND	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOTFND /;"	macro	line:31
+STAT_CLI_OBJGONE	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_OBJGONE /;"	macro	line:32
+STAT_CLI_TOOBIG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_TOOBIG /;"	macro	line:33
+STAT_CLI_TOOLNG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_TOOLNG /;"	macro	line:34
+STAT_CLI_BADFMT	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_BADFMT /;"	macro	line:35
+STAT_CLI_NOTSUP	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOTSUP /;"	macro	line:36
+STAT_CLI_NOSCHM	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOSCHM /;"	macro	line:37
+STAT_CLI_NOCHAR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOCHAR /;"	macro	line:38
+STAT_CLI_ATTRCON	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_ATTRCON /;"	macro	line:39
+STAT_CLI_NOCOMP	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_NOCOMP /;"	macro	line:40
+STAT_CLI_COMPERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_COMPERR /;"	macro	line:41
+STAT_CLI_FMTERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_FMTERR /;"	macro	line:42
+STAT_CLI_ACCERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_CLI_ACCERR /;"	macro	line:43
+STAT_SRV_INTERN	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_INTERN /;"	macro	line:45
+STAT_SRV_NOTSUP	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_NOTSUP /;"	macro	line:46
+STAT_SRV_UNAVAIL	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_UNAVAIL /;"	macro	line:47
+STAT_SRV_BADVER	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_BADVER /;"	macro	line:48
+STAT_SRV_DEVERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_DEVERR /;"	macro	line:49
+STAT_SRV_TMPERR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_TMPERR /;"	macro	line:50
+STAT_SRV_REJECT	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_REJECT /;"	macro	line:51
+STAT_SRV_TOOBUSY	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_TOOBUSY /;"	macro	line:52
+STAT_SRV_CANCEL	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_CANCEL /;"	macro	line:53
+STAT_SRV_NOMULTI	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define STAT_SRV_NOMULTI /;"	macro	line:54
+OP_PRINT_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_PRINT_JOB /;"	macro	line:59
+OP_PRINT_URI	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_PRINT_URI /;"	macro	line:60
+OP_VALIDATE_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_VALIDATE_JOB /;"	macro	line:61
+OP_CREATE_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_CREATE_JOB /;"	macro	line:62
+OP_SEND_DOC	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_SEND_DOC /;"	macro	line:63
+OP_SEND_URI	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_SEND_URI /;"	macro	line:64
+OP_CANCEL_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_CANCEL_JOB /;"	macro	line:65
+OP_GET_JOB_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_GET_JOB_ATTR /;"	macro	line:66
+OP_GET_JOBS	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_GET_JOBS /;"	macro	line:67
+OP_GET_PRINTER_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_GET_PRINTER_ATTR /;"	macro	line:68
+OP_HOLD_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_HOLD_JOB /;"	macro	line:69
+OP_RELEASE_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_RELEASE_JOB /;"	macro	line:70
+OP_RESTART_JOB	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_RESTART_JOB /;"	macro	line:71
+OP_PAUSE_PRINTER	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_PAUSE_PRINTER /;"	macro	line:72
+OP_RESUME_PRINTER	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_RESUME_PRINTER /;"	macro	line:73
+OP_PURGE_JOBS	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define OP_PURGE_JOBS /;"	macro	line:74
+TAG_OPERATION_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_OPERATION_ATTR /;"	macro	line:79
+TAG_JOB_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_JOB_ATTR /;"	macro	line:80
+TAG_END_OF_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_END_OF_ATTR /;"	macro	line:81
+TAG_PRINTER_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_PRINTER_ATTR /;"	macro	line:82
+TAG_UNSUPP_ATTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_UNSUPP_ATTR /;"	macro	line:83
+TAG_UNSUPPORTED	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_UNSUPPORTED /;"	macro	line:88
+TAG_UNKNOWN	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_UNKNOWN /;"	macro	line:89
+TAG_NONE	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_NONE /;"	macro	line:90
+TAG_INTEGER	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_INTEGER /;"	macro	line:91
+TAG_BOOLEAN	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_BOOLEAN /;"	macro	line:92
+TAG_ENUM	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_ENUM /;"	macro	line:93
+TAG_OCTSTR	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_OCTSTR /;"	macro	line:94
+TAG_DATETIME	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_DATETIME /;"	macro	line:95
+TAG_RESOLUTION	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_RESOLUTION /;"	macro	line:96
+TAG_INTRANGE	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_INTRANGE /;"	macro	line:97
+TAG_TEXTWLANG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_TEXTWLANG /;"	macro	line:98
+TAG_NAMEWLANG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_NAMEWLANG /;"	macro	line:99
+TAG_TEXTWOLANG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_TEXTWOLANG /;"	macro	line:100
+TAG_NAMEWOLANG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_NAMEWOLANG /;"	macro	line:101
+TAG_KEYWORD	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_KEYWORD /;"	macro	line:102
+TAG_URI	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_URI /;"	macro	line:103
+TAG_URISCHEME	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_URISCHEME /;"	macro	line:104
+TAG_CHARSET	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_CHARSET /;"	macro	line:105
+TAG_NATULANG	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_NATULANG /;"	macro	line:106
+TAG_MIMETYPE	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define TAG_MIMETYPE /;"	macro	line:107
+ipp_hdr	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^struct ipp_hdr {$/;"	struct	line:109
+major_version	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^	int8_t  major_version;	\/* always 1 *\/$/;"	member	line:110	struct:ipp_hdr
+minor_version	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^	int8_t  minor_version;	\/* always 1 *\/$/;"	member	line:111	struct:ipp_hdr
+op	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^		int16_t op;	\/* operation ID *\/$/;"	member	line:113	union:ipp_hdr::__anon3
+st	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^		int16_t st;	\/* status *\/$/;"	member	line:114	union:ipp_hdr::__anon3
+u	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^	} u;$/;"	member	line:115	struct:ipp_hdr	typeref:union:ipp_hdr::__anon3
+request_id	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^	int32_t request_id;		\/* request ID *\/$/;"	member	line:116	struct:ipp_hdr
+attr_group	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^	char    attr_group[1];	\/* start of optional attributes group *\/$/;"	member	line:117	struct:ipp_hdr
+operation	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define operation /;"	macro	line:121
+status	/home/andrea/文档/study/note/linux/apue/examples/printer/ipp.h	/^#define status /;"	macro	line:122
+HTTP_INFO	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^#define HTTP_INFO(/;"	macro	line:20	file:
+HTTP_SUCCESS	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^#define HTTP_SUCCESS(/;"	macro	line:21	file:
+job	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^struct job {$/;"	struct	line:26	file:
+next	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	struct job      *next;		\/* next in list *\/$/;"	member	line:27	struct:job	typeref:struct:job::job	file:
+prev	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	struct job      *prev;		\/* previous in list *\/$/;"	member	line:28	struct:job	typeref:struct:job::job	file:
+jobid	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	int32_t          jobid;		\/* job ID *\/$/;"	member	line:29	struct:job	file:
+req	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	struct printreq  req;		\/* copy of print request *\/$/;"	member	line:30	struct:job	typeref:struct:job::printreq	file:
+worker_thread	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^struct worker_thread {$/;"	struct	line:36	file:
+next	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	struct worker_thread  *next;	\/* next in list *\/$/;"	member	line:37	struct:worker_thread	typeref:struct:worker_thread::worker_thread	file:
+prev	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	struct worker_thread  *prev;	\/* previous in list *\/$/;"	member	line:38	struct:worker_thread	typeref:struct:worker_thread::worker_thread	file:
+tid	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	pthread_t              tid;		\/* thread ID *\/$/;"	member	line:39	struct:worker_thread	file:
+sockfd	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^	int                    sockfd;	\/* socket *\/$/;"	member	line:40	struct:worker_thread	file:
+log_to_stderr	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^int					log_to_stderr = 0;$/;"	variable	line:46
+printer	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^struct addrinfo		*printer;$/;"	variable	line:51	typeref:struct:addrinfo
+printer_name	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^char					*printer_name;$/;"	variable	line:52
+configlock	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^pthread_mutex_t		configlock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:53
+reread	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^int					reread;$/;"	variable	line:54
+workers	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^struct worker_thread	*workers;$/;"	variable	line:59	typeref:struct:worker_thread
+workerlock	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^pthread_mutex_t		workerlock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:60
+mask	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^sigset_t				mask;$/;"	variable	line:61
+jobhead	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^struct job				*jobhead, *jobtail;$/;"	variable	line:66	typeref:struct:job
+jobtail	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^struct job				*jobhead, *jobtail;$/;"	variable	line:66	typeref:struct:
+jobfd	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^int					jobfd;$/;"	variable	line:67
+nextjob	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^int32_t				nextjob;$/;"	variable	line:68
+joblock	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^pthread_mutex_t		joblock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:69
+jobwait	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^pthread_cond_t			jobwait = PTHREAD_COND_INITIALIZER;$/;"	variable	line:70
+main	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^main(int argc, char *argv[])$/;"	function	line:99	signature:(int argc, char *argv[])
+init_request	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^init_request(void)$/;"	function	line:195	signature:(void)
+init_printer	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^init_printer(void)$/;"	function	line:222	signature:(void)
+update_jobno	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^update_jobno(void)$/;"	function	line:240	signature:(void)
+get_newjobno	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^get_newjobno(void)$/;"	function	line:257	signature:(void)
+add_job	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^add_job(struct printreq *reqp, int32_t jobid)$/;"	function	line:276	signature:(struct printreq *reqp, int32_t jobid)
+replace_job	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^replace_job(struct job *jp)$/;"	function	line:302	signature:(struct job *jp)
+remove_job	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^remove_job(struct job *target)$/;"	function	line:321	signature:(struct job *target)
+build_qonstart	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^build_qonstart(void)$/;"	function	line:339	signature:(void)
+client_thread	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^client_thread(void *arg)$/;"	function	line:393	signature:(void *arg)
+add_worker	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^add_worker(pthread_t tid, int sockfd)$/;"	function	line:531	signature:(pthread_t tid, int sockfd)
+kill_workers	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^kill_workers(void)$/;"	function	line:557	signature:(void)
+client_cleanup	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^client_cleanup(void *arg)$/;"	function	line:573	signature:(void *arg)
+signal_thread	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^signal_thread(void *arg)$/;"	function	line:604	signature:(void *arg)
+add_option	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^add_option(char *cp, int tag, char *optname, char *optval)$/;"	function	line:640	signature:(char *cp, int tag, char *optname, char *optval)
+printer_thread	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^printer_thread(void *arg)$/;"	function	line:669	signature:(void *arg)
+readmore	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^readmore(int sockfd, char **bpp, int off, int *bszp)$/;"	function	line:850	signature:(int sockfd, char **bpp, int off, int *bszp)
+printer_status	/home/andrea/文档/study/note/linux/apue/examples/printer/printd.c	/^printer_status(int sfd, struct job *jp)$/;"	function	line:876	signature:(int sfd, struct job *jp)
+_PRINT_H	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define _PRINT_H$/;"	macro	line:2
+CONFIG_FILE	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define CONFIG_FILE /;"	macro	line:12
+SPOOLDIR	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define SPOOLDIR /;"	macro	line:13
+JOBFILE	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define JOBFILE /;"	macro	line:14
+DATADIR	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define DATADIR /;"	macro	line:15
+REQDIR	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define REQDIR /;"	macro	line:16
+LPNAME	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define LPNAME	/;"	macro	line:19
+LPNAME	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define LPNAME	/;"	macro	line:21
+LPNAME	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define LPNAME	/;"	macro	line:23
+FILENMSZ	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define FILENMSZ /;"	macro	line:26
+FILEPERM	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define FILEPERM /;"	macro	line:27
+USERNM_MAX	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define USERNM_MAX /;"	macro	line:29
+JOBNM_MAX	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define JOBNM_MAX /;"	macro	line:30
+MSGLEN_MAX	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define MSGLEN_MAX /;"	macro	line:31
+HOST_NAME_MAX	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define HOST_NAME_MAX /;"	macro	line:34
+IPP_PORT	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define IPP_PORT /;"	macro	line:37
+QLEN	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define QLEN /;"	macro	line:38
+IBUFSZ	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define IBUFSZ /;"	macro	line:40
+HBUFSZ	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define HBUFSZ /;"	macro	line:41
+IOBUFSZ	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define IOBUFSZ /;"	macro	line:42
+ETIME	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define ETIME /;"	macro	line:45
+printreq	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^struct printreq {$/;"	struct	line:62
+size	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	uint32_t size;				\/* size in bytes *\/$/;"	member	line:63	struct:printreq
+flags	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	uint32_t flags;				\/* see below *\/$/;"	member	line:64	struct:printreq
+usernm	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	char usernm[USERNM_MAX];	\/* user's name *\/$/;"	member	line:65	struct:printreq
+jobnm	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	char jobnm[JOBNM_MAX];		\/* job's name *\/$/;"	member	line:66	struct:printreq
+PR_TEXT	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^#define PR_TEXT	/;"	macro	line:72
+printresp	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^struct printresp {$/;"	struct	line:77
+retcode	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	uint32_t retcode;			\/* 0=success, !0=error code *\/$/;"	member	line:78	struct:printresp
+jobid	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	uint32_t jobid;				\/* job ID *\/$/;"	member	line:79	struct:printresp
+msg	/home/andrea/文档/study/note/linux/apue/examples/printer/print.h	/^	char msg[MSGLEN_MAX];		\/* error message *\/$/;"	member	line:80	struct:printresp
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/vfork3.c	/^main(void)$/;"	function	line:6	signature:(void)
+f1	/home/andrea/文档/study/note/linux/apue/examples/exercises/vfork3.c	/^f1(void)$/;"	function	line:14	file:	signature:(void)
+f2	/home/andrea/文档/study/note/linux/apue/examples/exercises/vfork3.c	/^f2(void)$/;"	function	line:24	file:	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/getpwsvr4.c	/^main(void)		\/* Linux\/Solaris version *\/$/;"	function	line:5	signature:(void)
+sleep_us	/home/andrea/文档/study/note/linux/apue/examples/exercises/sleepus_poll.c	/^sleep_us(unsigned int nusecs)$/;"	function	line:4	signature:(unsigned int nusecs)
+sleep_us	/home/andrea/文档/study/note/linux/apue/examples/exercises/sleepus_select.c	/^sleep_us(unsigned int nusecs)$/;"	function	line:5	signature:(unsigned int nusecs)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+GETPW	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  GETPW = getpw44bsd$/;"	macro	line:6
+FMEM	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  FMEM = fmemopen.o$/;"	macro	line:7
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:8
+GETPW	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  GETPW = getpwsvr4$/;"	macro	line:11
+FMEM	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  FMEM =$/;"	macro	line:12
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:13
+GETPW	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  GETPW = getpw44bsd$/;"	macro	line:16
+FMEM	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  FMEM = fmemopen.o$/;"	macro	line:17
+GETPW	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  GETPW = getpwsvr4$/;"	macro	line:20
+FMEM	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^  FMEM =$/;"	macro	line:21
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/exercises/Makefile	/^PROGS =	bo fifo1 getlogin goodexit longpath pendlock prtime sizepipe vfork3 zombie$/;"	macro	line:24
+NQ	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^#define NQ	/;"	macro	line:7	file:
+MAXMSZ	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^#define MAXMSZ	/;"	macro	line:8	file:
+KEY	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^#define KEY	/;"	macro	line:9	file:
+mymesg	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^struct mymesg {$/;"	struct	line:11	file:
+mtype	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	long		mtype;$/;"	member	line:12	struct:mymesg	file:
+mtext	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	char		mtext[MAXMSZ+1];$/;"	member	line:13	struct:mymesg	file:
+threadinfo	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^struct threadinfo {$/;"	struct	line:16	file:
+qid	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	int				qid;$/;"	member	line:17	struct:threadinfo	file:
+fd	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	int				fd;$/;"	member	line:18	struct:threadinfo	file:
+len	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	int				len;$/;"	member	line:19	struct:threadinfo	file:
+mutex	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	pthread_mutex_t	mutex;$/;"	member	line:20	struct:threadinfo	file:
+ready	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	pthread_cond_t	ready;$/;"	member	line:21	struct:threadinfo	file:
+m	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^	struct mymesg	m;$/;"	member	line:22	struct:threadinfo	typeref:struct:threadinfo::mymesg	file:
+helper	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^helper(void *arg)$/;"	function	line:26	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/pollmsg2.c	/^main()$/;"	function	line:46
+PSCMD	/home/andrea/文档/study/note/linux/apue/examples/exercises/zombie.c	/^#define PSCMD	/;"	macro	line:4	file:
+PSCMD	/home/andrea/文档/study/note/linux/apue/examples/exercises/zombie.c	/^#define PSCMD	/;"	macro	line:6	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/zombie.c	/^main(void)$/;"	function	line:10	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/getpw44bsd.c	/^main(void)		\/* FreeBSD\/Mac OS X version *\/$/;"	function	line:5	signature:(void)
+sleep	/home/andrea/文档/study/note/linux/apue/examples/exercises/sleep.c	/^sleep(unsigned seconds)$/;"	function	line:6	signature:(unsigned seconds)
+FIFO	/home/andrea/文档/study/note/linux/apue/examples/exercises/fifo1.c	/^#define	FIFO	/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/fifo1.c	/^main(void)$/;"	function	line:7	signature:(void)
+OPEN_MAX_GUESS	/home/andrea/文档/study/note/linux/apue/examples/exercises/openmax.c	/^#define OPEN_MAX_GUESS	/;"	macro	line:5	file:
+open_max	/home/andrea/文档/study/note/linux/apue/examples/exercises/openmax.c	/^open_max(void)$/;"	function	line:8	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/sizepipe.c	/^main(void)$/;"	function	line:5	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/prtime.c	/^main(void)$/;"	function	line:5	signature:(void)
+foo	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^struct foo {$/;"	struct	line:4	file:
+a	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+b	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+c	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+d	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^	int a, b, c, d;$/;"	member	line:5	struct:foo	file:
+printfoo	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^printfoo(const char *s, const struct foo *fp)$/;"	function	line:9	signature:(const char *s, const struct foo *fp)
+thr_fn1	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^thr_fn1(void *arg)$/;"	function	line:20	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/goodexit.c	/^main(void)$/;"	function	line:35	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/bo.c	/^main(void)$/;"	function	line:6	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/getlogin.c	/^main(void)$/;"	function	line:4	signature:(void)
+setasync	/home/andrea/文档/study/note/linux/apue/examples/exercises/asyncsocket.c	/^setasync(int sockfd)$/;"	function	line:11	signature:(int sockfd)
+clrasync	/home/andrea/文档/study/note/linux/apue/examples/exercises/asyncsocket.c	/^clrasync(int sockfd)$/;"	function	line:24	signature:(int sockfd)
+DEPTH	/home/andrea/文档/study/note/linux/apue/examples/exercises/longpath.c	/^#define	DEPTH /;"	macro	line:4	file:
+STARTDIR	/home/andrea/文档/study/note/linux/apue/examples/exercises/longpath.c	/^#define	STARTDIR /;"	macro	line:5	file:
+NAME	/home/andrea/文档/study/note/linux/apue/examples/exercises/longpath.c	/^#define	NAME /;"	macro	line:6	file:
+MAXSZ	/home/andrea/文档/study/note/linux/apue/examples/exercises/longpath.c	/^#define MAXSZ /;"	macro	line:7	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/longpath.c	/^main(void)$/;"	function	line:10	signature:(void)
+memstream	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^struct memstream$/;"	struct	line:9	file:
+buf	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^	char	*buf;	\/* in-memory buffer *\/$/;"	member	line:11	struct:memstream	file:
+rsize	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^	size_t	rsize;	\/* real size of buffer *\/$/;"	member	line:12	struct:memstream	file:
+vsize	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^	size_t	vsize;	\/* virtual size of buffer *\/$/;"	member	line:13	struct:memstream	file:
+curpos	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^	size_t	curpos;	\/* current position in buffer *\/$/;"	member	line:14	struct:memstream	file:
+flags	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^	int		flags;	\/* see below *\/$/;"	member	line:15	struct:memstream	file:
+MS_READ	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^#define MS_READ	/;"	macro	line:19	file:
+MS_WRITE	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^#define MS_WRITE	/;"	macro	line:20	file:
+MS_APPEND	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^#define MS_APPEND	/;"	macro	line:21	file:
+MS_TRUNCATE	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^#define MS_TRUNCATE	/;"	macro	line:22	file:
+MS_MYBUF	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^#define MS_MYBUF	/;"	macro	line:23	file:
+MIN	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^#define MIN(/;"	macro	line:26	file:
+fmemopen	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^fmemopen(void *__restrict buf, size_t size,$/;"	function	line:37	signature:(void *__restrict buf, size_t size, const char *__restrict type)
+type_to_flags	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^type_to_flags(const char *__restrict type)$/;"	function	line:97	file:	signature:(const char *__restrict type)
+find_end	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^find_end(char *buf, size_t len)$/;"	function	line:141	file:	signature:(char *buf, size_t len)
+mstream_read	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^mstream_read(void *cookie, char *buf, int len)$/;"	function	line:154	file:	signature:(void *cookie, char *buf, int len)
+mstream_write	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^mstream_write(void *cookie, const char *buf, int len)$/;"	function	line:174	file:	signature:(void *cookie, const char *buf, int len)
+mstream_seek	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^mstream_seek(void *cookie, fpos_t pos, int whence)$/;"	function	line:207	file:	signature:(void *cookie, fpos_t pos, int whence)
+mstream_close	/home/andrea/文档/study/note/linux/apue/examples/exercises/fmemopen.c	/^mstream_close(void *cookie)$/;"	function	line:232	file:	signature:(void *cookie)
+sigint	/home/andrea/文档/study/note/linux/apue/examples/exercises/pendlock.c	/^sigint(int signo)$/;"	function	line:6	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/exercises/pendlock.c	/^main(void)$/;"	function	line:11	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/fileio/seek.c	/^main(void)$/;"	function	line:4	signature:(void)
+buf1	/home/andrea/文档/study/note/linux/apue/examples/fileio/hole.c	/^char	buf1[] = "abcdefghij";$/;"	variable	line:4
+buf2	/home/andrea/文档/study/note/linux/apue/examples/fileio/hole.c	/^char	buf2[] = "ABCDEFGHIJ";$/;"	variable	line:5
+main	/home/andrea/文档/study/note/linux/apue/examples/fileio/hole.c	/^main(void)$/;"	function	line:8	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/fileio/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/fileio/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/fileio/Makefile	/^PROGS =	fileflags hole mycat seek$/;"	macro	line:5
+BUFFSIZE	/home/andrea/文档/study/note/linux/apue/examples/fileio/mycat.c	/^#define	BUFFSIZE	/;"	macro	line:3	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/fileio/mycat.c	/^main(void)$/;"	function	line:6	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/fileio/fileflags.c	/^main(int argc, char *argv[])$/;"	function	line:5	signature:(int argc, char *argv[])
+set_fl	/home/andrea/文档/study/note/linux/apue/examples/fileio/setfl.c	/^set_fl(int fd, int flags) \/* flags are file status flags to turn on *\/$/;"	function	line:5	signature:(int fd, int flags)
+MAXSTRINGSZ	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv3.c	/^#define MAXSTRINGSZ	/;"	macro	line:6	file:
+key	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv3.c	/^static pthread_key_t key;$/;"	variable	line:8	file:
+init_done	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv3.c	/^static pthread_once_t init_done = PTHREAD_ONCE_INIT;$/;"	variable	line:9	file:
+env_mutex	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv3.c	/^pthread_mutex_t env_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:10
+thread_init	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv3.c	/^thread_init(void)$/;"	function	line:15	file:	signature:(void)
+getenv	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv3.c	/^getenv(const char *name)$/;"	function	line:21	signature:(const char *name)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+TOUT	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^TOUT =$/;"	macro	line:5
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^  EXTRALIBS = -pthread$/;"	macro	line:7
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^  EXTRALIBS = -pthread$/;"	macro	line:10
+TOUT	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^  TOUT = timeout.o$/;"	macro	line:11
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^  EXTRALIBS = -lpthread$/;"	macro	line:14
+TOUT	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^  TOUT = timeout.o$/;"	macro	line:15
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/threadctl/Makefile	/^PROGS =	atfork suspend$/;"	macro	line:18
+MAXSTRINGSZ	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv1.c	/^#define MAXSTRINGSZ	/;"	macro	line:4	file:
+envbuf	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv1.c	/^static char envbuf[MAXSTRINGSZ];$/;"	variable	line:6	file:
+getenv	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv1.c	/^getenv(const char *name)$/;"	function	line:11	signature:(const char *name)
+lock1	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^pthread_mutex_t lock1 = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:4
+lock2	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^pthread_mutex_t lock2 = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:5
+prepare	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^prepare(void)$/;"	function	line:8	signature:(void)
+parent	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^parent(void)$/;"	function	line:20	signature:(void)
+child	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^child(void)$/;"	function	line:32	signature:(void)
+thr_fn	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^thr_fn(void *arg)$/;"	function	line:44	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threadctl/atfork.c	/^main(void)$/;"	function	line:52	signature:(void)
+env_mutex	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv2.c	/^pthread_mutex_t env_mutex;$/;"	variable	line:8
+init_done	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv2.c	/^static pthread_once_t init_done = PTHREAD_ONCE_INIT;$/;"	variable	line:10	file:
+thread_init	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv2.c	/^thread_init(void)$/;"	function	line:13	file:	signature:(void)
+getenv_r	/home/andrea/文档/study/note/linux/apue/examples/threadctl/getenv2.c	/^getenv_r(const char *name, char *buf, int buflen)$/;"	function	line:24	signature:(const char *name, char *buf, int buflen)
+makethread	/home/andrea/文档/study/note/linux/apue/examples/threadctl/detach.c	/^makethread(void *(*fn)(void *), void *arg)$/;"	function	line:5	signature:(void *(*fn)(void *), void *arg)
+quitflag	/home/andrea/文档/study/note/linux/apue/examples/threadctl/suspend.c	/^int			quitflag;	\/* set nonzero by thread *\/$/;"	variable	line:4
+mask	/home/andrea/文档/study/note/linux/apue/examples/threadctl/suspend.c	/^sigset_t	mask;$/;"	variable	line:5
+lock	/home/andrea/文档/study/note/linux/apue/examples/threadctl/suspend.c	/^pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;$/;"	variable	line:7
+waitloc	/home/andrea/文档/study/note/linux/apue/examples/threadctl/suspend.c	/^pthread_cond_t waitloc = PTHREAD_COND_INITIALIZER;$/;"	variable	line:8
+thr_fn	/home/andrea/文档/study/note/linux/apue/examples/threadctl/suspend.c	/^thr_fn(void *arg)$/;"	function	line:11	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threadctl/suspend.c	/^main(void)$/;"	function	line:39	signature:(void)
+to_info	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^struct to_info {$/;"	struct	line:8	file:
+to_fn	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^	void	      (*to_fn)(void *);	\/* function *\/$/;"	member	line:9	struct:to_info	file:
+to_arg	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^	void           *to_arg;			\/* argument *\/$/;"	member	line:10	struct:to_info	file:
+to_wait	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^	struct timespec to_wait;		\/* time to wait *\/$/;"	member	line:11	struct:to_info	typeref:struct:to_info::timespec	file:
+SECTONSEC	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^#define SECTONSEC /;"	macro	line:14	file:
+clock_nanosleep	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^#define clock_nanosleep(/;"	macro	line:17	file:
+CLOCK_REALTIME	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^#define CLOCK_REALTIME /;"	macro	line:21	file:
+USECTONSEC	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^#define USECTONSEC /;"	macro	line:22	file:
+clock_gettime	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^clock_gettime(int id, struct timespec *tsp)$/;"	function	line:25	signature:(int id, struct timespec *tsp)
+timeout_helper	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^timeout_helper(void *arg)$/;"	function	line:36	signature:(void *arg)
+timeout	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^timeout(const struct timespec *when, void (*func)(void *), void *arg)$/;"	function	line:48	signature:(const struct timespec *when, void (*func)(void *), void *arg)
+attr	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^pthread_mutexattr_t attr;$/;"	variable	line:84
+mutex	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^pthread_mutex_t mutex;$/;"	variable	line:85
+retry	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^retry(void *arg)$/;"	function	line:88	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/threadctl/timeout.c	/^main(void)$/;"	function	line:98	signature:(void)
+_APUE_H	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	_APUE_H$/;"	macro	line:5
+_POSIX_C_SOURCE	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define _POSIX_C_SOURCE /;"	macro	line:7
+_XOPEN_SOURCE	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define _XOPEN_SOURCE /;"	macro	line:10
+_XOPEN_SOURCE	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define _XOPEN_SOURCE /;"	macro	line:12
+MAXLINE	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	MAXLINE	/;"	macro	line:30
+FILE_MODE	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	FILE_MODE	/;"	macro	line:35
+DIR_MODE	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	DIR_MODE	/;"	macro	line:40
+Sigfunc	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^typedef	void	Sigfunc(int);	\/* for signal handlers *\/$/;"	typedef	line:42
+min	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	min(/;"	macro	line:44
+max	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	max(/;"	macro	line:45
+read_lock	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	read_lock(/;"	macro	line:95
+readw_lock	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	readw_lock(/;"	macro	line:97
+write_lock	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	write_lock(/;"	macro	line:99
+writew_lock	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	writew_lock(/;"	macro	line:101
+un_lock	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	un_lock(/;"	macro	line:103
+is_read_lockable	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	is_read_lockable(/;"	macro	line:108
+is_write_lockable	/home/andrea/文档/study/note/linux/apue/examples/include/apue.h	/^#define	is_write_lockable(/;"	macro	line:110
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/getcharbug.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/mkstemp.c	/^main()$/;"	function	line:7
+make_temp	/home/andrea/文档/study/note/linux/apue/examples/stdio/mkstemp.c	/^make_temp(char *template)$/;"	function	line:20	signature:(char *template)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/stdio/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/stdio/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+MEMSTR	/home/andrea/文档/study/note/linux/apue/examples/stdio/Makefile	/^  MEMSTR = memstr$/;"	macro	line:6
+MEMSTR	/home/andrea/文档/study/note/linux/apue/examples/stdio/Makefile	/^  MEMSTR =$/;"	macro	line:8
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/stdio/Makefile	/^PROGS =	buf fgetsfputs getcharbug getcputc mkstemp tempfiles$/;"	macro	line:11
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/getcputc.c	/^main(void)$/;"	function	line:4	signature:(void)
+BSZ	/home/andrea/文档/study/note/linux/apue/examples/stdio/memstr.c	/^#define BSZ /;"	macro	line:3	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/memstr.c	/^main()$/;"	function	line:6
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^main(void)$/;"	function	line:9	signature:(void)
+pr_stdio	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^pr_stdio(const char *name, FILE *fp)$/;"	function	line:31	signature:(const char *name, FILE *fp)
+is_unbuffered	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^is_unbuffered(FILE *fp)$/;"	function	line:50	signature:(FILE *fp)
+is_linebuffered	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^is_linebuffered(FILE *fp)$/;"	function	line:56	signature:(FILE *fp)
+buffer_size	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^buffer_size(FILE *fp)$/;"	function	line:62	signature:(FILE *fp)
+is_unbuffered	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^is_unbuffered(FILE *fp)$/;"	function	line:70	signature:(FILE *fp)
+is_linebuffered	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^is_linebuffered(FILE *fp)$/;"	function	line:76	signature:(FILE *fp)
+buffer_size	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^buffer_size(FILE *fp)$/;"	function	line:82	signature:(FILE *fp)
+_flag	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^#define _flag /;"	macro	line:90	file:
+_ptr	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^#define _ptr /;"	macro	line:91	file:
+_base	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^#define _base /;"	macro	line:92	file:
+is_unbuffered	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^is_unbuffered(FILE *fp)$/;"	function	line:96	signature:(FILE *fp)
+is_linebuffered	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^is_linebuffered(FILE *fp)$/;"	function	line:102	signature:(FILE *fp)
+buffer_size	/home/andrea/文档/study/note/linux/apue/examples/stdio/buf.c	/^buffer_size(FILE *fp)$/;"	function	line:108	signature:(FILE *fp)
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/fgetsfputs.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/stdio/tempfiles.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/shell2.c	/^main(void)$/;"	function	line:8	signature:(void)
+sig_int	/home/andrea/文档/study/note/linux/apue/examples/intro/shell2.c	/^sig_int(int signo)$/;"	function	line:45	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/hello.c	/^main(void)$/;"	function	line:4	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/intro/Makefile	/^ROOT=..$/;"	macro	line:2
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/intro/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:4
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/intro/Makefile	/^PROGS =	getcputc hello ls1 mycat shell1 shell2 testerror uidgid$/;"	macro	line:8
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/getcputc.c	/^main(void)$/;"	function	line:7	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/testerror.c	/^main(int argc, char *argv[])$/;"	function	line:8	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/shell1.c	/^main(void)$/;"	function	line:6	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/uidgid.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/ls1.c	/^main(int argc, char *argv[])$/;"	function	line:8	signature:(int argc, char *argv[])
+BUFFSIZE	/home/andrea/文档/study/note/linux/apue/examples/intro/mycat.c	/^#define	BUFFSIZE	/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/intro/mycat.c	/^main(void)$/;"	function	line:7	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/mycd.c	/^main(void)$/;"	function	line:4	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/changemod.c	/^main(void)$/;"	function	line:4	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/filedir/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/filedir/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+ZAP	/home/andrea/文档/study/note/linux/apue/examples/filedir/Makefile	/^	ZAP = zap$/;"	macro	line:6
+ZAP	/home/andrea/文档/study/note/linux/apue/examples/filedir/Makefile	/^	ZAP =$/;"	macro	line:8
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/filedir/Makefile	/^PROGS =	access cdpwd changemod devrdev filetype mycd umask unlink $(ZAP)$/;"	macro	line:12
+MOREPROGS	/home/andrea/文档/study/note/linux/apue/examples/filedir/Makefile	/^MOREPROGS = ftw8$/;"	macro	line:13
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/devrdev.c	/^main(int argc, char *argv[])$/;"	function	line:7	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/access.c	/^main(int argc, char *argv[])$/;"	function	line:5	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/filetype.c	/^main(int argc, char *argv[])$/;"	function	line:4	signature:(int argc, char *argv[])
+RWRWRW	/home/andrea/文档/study/note/linux/apue/examples/filedir/umask.c	/^#define RWRWRW /;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/umask.c	/^main(void)$/;"	function	line:7	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/cdpwd.c	/^main(void)$/;"	function	line:4	signature:(void)
+Myfunc	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^typedef	int	Myfunc(const char *, const struct stat *, int);$/;"	typedef	line:6	file:
+myfunc	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static Myfunc	myfunc;$/;"	variable	line:8	file:
+nreg	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+ndir	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+nblk	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+nchr	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+nfifo	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+nslink	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+nsock	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+ntot	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static long	nreg, ndir, nblk, nchr, nfifo, nslink, nsock, ntot;$/;"	variable	line:12	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^main(int argc, char *argv[])$/;"	function	line:15	signature:(int argc, char *argv[])
+FTW_F	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^#define	FTW_F	/;"	macro	line:48	file:
+FTW_D	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^#define	FTW_D	/;"	macro	line:49	file:
+FTW_DNR	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^#define	FTW_DNR	/;"	macro	line:50	file:
+FTW_NS	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^#define	FTW_NS	/;"	macro	line:51	file:
+fullpath	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static char	*fullpath;		\/* contains full pathname for every file *\/$/;"	variable	line:53	file:
+pathlen	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^static size_t pathlen;$/;"	variable	line:54	file:
+myftw	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^myftw(char *pathname, Myfunc *func)$/;"	function	line:57	file:	signature:(char *pathname, Myfunc *func)
+dopath	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^dopath(Myfunc* func)$/;"	function	line:77	file:	signature:(Myfunc* func)
+myfunc	/home/andrea/文档/study/note/linux/apue/examples/filedir/ftw8.c	/^myfunc(const char *pathname, const struct stat *statptr, int type)$/;"	function	line:124	file:	signature:(const char *pathname, const struct stat *statptr, int type)
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/zap.c	/^main(int argc, char *argv[])$/;"	function	line:5	signature:(int argc, char *argv[])
+main	/home/andrea/文档/study/note/linux/apue/examples/filedir/unlink.c	/^main(void)$/;"	function	line:5	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/t_ttyname.c	/^main(void)$/;"	function	line:4	signature:(void)
+isatty	/home/andrea/文档/study/note/linux/apue/examples/termios/isatty.c	/^isatty(int fd)$/;"	function	line:4	signature:(int fd)
+ctermid_name	/home/andrea/文档/study/note/linux/apue/examples/termios/ctermid.c	/^static char	ctermid_name[L_ctermid];$/;"	variable	line:4	file:
+ctermid	/home/andrea/文档/study/note/linux/apue/examples/termios/ctermid.c	/^ctermid(char *str)$/;"	function	line:7	signature:(char *str)
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/t_getpass.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_catch	/home/andrea/文档/study/note/linux/apue/examples/termios/t_raw.c	/^sig_catch(int signo)$/;"	function	line:4	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/t_raw.c	/^main(void)$/;"	function	line:12	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/termios/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/termios/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/termios/Makefile	/^PROGS =	csize settty t_getpass t_isatty t_raw t_ttyname winch$/;"	macro	line:5
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/csize.c	/^main(void)$/;"	function	line:5	signature:(void)
+MAX_PASS_LEN	/home/andrea/文档/study/note/linux/apue/examples/termios/getpass.c	/^#define	MAX_PASS_LEN	/;"	macro	line:5	file:
+getpass	/home/andrea/文档/study/note/linux/apue/examples/termios/getpass.c	/^getpass(const char *prompt)$/;"	function	line:8	signature:(const char *prompt)
+devdir	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^struct devdir {$/;"	struct	line:9	file:
+d_next	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^	struct devdir	*d_next;$/;"	member	line:10	struct:devdir	typeref:struct:devdir::devdir	file:
+d_name	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^	char			*d_name;$/;"	member	line:11	struct:devdir	file:
+head	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^static struct devdir	*head;$/;"	variable	line:14	typeref:struct:devdir	file:
+tail	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^static struct devdir	*tail;$/;"	variable	line:15	typeref:struct:devdir	file:
+pathname	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^static char				pathname[_POSIX_PATH_MAX + 1];$/;"	variable	line:16	file:
+add	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^add(char *dirname)$/;"	function	line:19	file:	signature:(char *dirname)
+cleanup	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^cleanup(void)$/;"	function	line:53	file:	signature:(void)
+searchdir	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^searchdir(char *dirname, struct stat *fdstatp)$/;"	function	line:69	file:	signature:(char *dirname, struct stat *fdstatp)
+ttyname	/home/andrea/文档/study/note/linux/apue/examples/termios/ttyname.c	/^ttyname(int fd)$/;"	function	line:110	signature:(int fd)
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/settty.c	/^main(void)$/;"	function	line:5	signature:(void)
+pr_winsize	/home/andrea/文档/study/note/linux/apue/examples/termios/winch.c	/^pr_winsize(int fd)$/;"	function	line:8	file:	signature:(int fd)
+sig_winch	/home/andrea/文档/study/note/linux/apue/examples/termios/winch.c	/^sig_winch(int signo)$/;"	function	line:18	file:	signature:(int signo)
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/winch.c	/^main(void)$/;"	function	line:25	signature:(void)
+main	/home/andrea/文档/study/note/linux/apue/examples/termios/t_isatty.c	/^main(void)$/;"	function	line:4	signature:(void)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/standards/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/standards/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/standards/Makefile	/^PROGS =	conf options$/;"	macro	line:5
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/Makefile	/^ROOT=..\/..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/Makefile	/^  EXTRALIBS=-lsocket -lnsl$/;"	macro	line:6
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/Makefile	/^PROGS =	opend$/;"	macro	line:9
+cli_args	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/cliargs.c	/^cli_args(int argc, char **argv)$/;"	function	line:9	signature:(int argc, char **argv)
+handle_request	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/request.c	/^handle_request(char *buf, int nread, int fd)$/;"	function	line:5	signature:(char *buf, int nread, int fd)
+CL_OPEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/opend.h	/^#define	CL_OPEN /;"	macro	line:4
+errmsg	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/main.c	/^char	 errmsg[MAXLINE];$/;"	variable	line:3
+oflag	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/main.c	/^int		 oflag;$/;"	variable	line:4
+pathname	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/main.c	/^char	*pathname;$/;"	variable	line:5
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend.fe/main.c	/^main(void)$/;"	function	line:8	signature:(void)
+CREDSTRUCT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define CREDSTRUCT	/;"	macro	line:5	file:
+SCM_CREDTYPE	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define SCM_CREDTYPE	/;"	macro	line:6	file:
+CREDSTRUCT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define CREDSTRUCT	/;"	macro	line:8	file:
+SCM_CREDTYPE	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define SCM_CREDTYPE	/;"	macro	line:9	file:
+RIGHTSLEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define RIGHTSLEN	/;"	macro	line:15	file:
+CREDSLEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define CREDSLEN	/;"	macro	line:16	file:
+CONTROLLEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^#define	CONTROLLEN	/;"	macro	line:17	file:
+cmptr	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^static struct cmsghdr	*cmptr = NULL;	\/* malloc'ed first time *\/$/;"	variable	line:19	typeref:struct:cmsghdr	file:
+send_fd	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendfd2.c	/^send_fd(int fd, int fd_to_send)$/;"	function	line:26	signature:(int fd, int fd_to_send)
+MAXMSZ	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendmsg.c	/^#define MAXMSZ /;"	macro	line:4	file:
+mymesg	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendmsg.c	/^struct mymesg {$/;"	struct	line:6	file:
+mtype	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendmsg.c	/^	long mtype;$/;"	member	line:7	struct:mymesg	file:
+mtext	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendmsg.c	/^	char mtext[MAXMSZ];$/;"	member	line:8	struct:mymesg	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/sendmsg.c	/^main(int argc, char *argv[])$/;"	function	line:12	signature:(int argc, char *argv[])
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^ROOT=..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:6
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^  EXTRALIBS=-pthread$/;"	macro	line:9
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^  EXTRALIBS=-lsocket -lnsl$/;"	macro	line:12
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^PROGS =	bindunix pollmsg sendmsg$/;"	macro	line:15
+FDPASS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^FDPASS =$/;"	macro	line:16
+FDPASS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^	FDPASS = recvfd2.o sendfd2.o$/;"	macro	line:19
+FDPASS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/Makefile	/^	FDPASS = recvfd2.o sendfd2.o$/;"	macro	line:22
+NQ	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^#define NQ	/;"	macro	line:7	file:
+MAXMSZ	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^#define MAXMSZ	/;"	macro	line:8	file:
+KEY	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^#define KEY	/;"	macro	line:9	file:
+threadinfo	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^struct threadinfo {$/;"	struct	line:11	file:
+qid	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^	int qid;$/;"	member	line:12	struct:threadinfo	file:
+fd	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^	int fd;$/;"	member	line:13	struct:threadinfo	file:
+mymesg	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^struct mymesg {$/;"	struct	line:16	file:
+mtype	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^	long mtype;$/;"	member	line:17	struct:mymesg	file:
+mtext	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^	char mtext[MAXMSZ];$/;"	member	line:18	struct:mymesg	file:
+helper	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^helper(void *arg)$/;"	function	line:22	signature:(void *arg)
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/pollmsg.c	/^main()$/;"	function	line:38
+CL_OPEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/open.h	/^#define	CL_OPEN /;"	macro	line:4
+CS_OPEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/open.h	/^#define CS_OPEN /;"	macro	line:5
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/Makefile	/^ROOT=..\/..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/Makefile	/^  EXTRALIBS=-lsocket -lnsl$/;"	macro	line:6
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/Makefile	/^PROGS =	openclient$/;"	macro	line:9
+BUFFSIZE	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/main.c	/^#define	BUFFSIZE	/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/main.c	/^main(int argc, char *argv[])$/;"	function	line:7	signature:(int argc, char *argv[])
+csopen	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open/open.c	/^csopen(char *name, int oflag)$/;"	function	line:9	signature:(char *name, int oflag)
+NALLOC	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/client.c	/^#define	NALLOC	/;"	macro	line:3	file:
+client_alloc	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/client.c	/^client_alloc(void)		\/* alloc more entries in the client[] array *\/$/;"	function	line:6	file:	signature:(void)
+client_add	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/client.c	/^client_add(int fd, uid_t uid)$/;"	function	line:28	signature:(int fd, uid_t uid)
+client_del	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/client.c	/^client_del(int fd)$/;"	function	line:52	signature:(int fd)
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/Makefile	/^ROOT=..\/..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/Makefile	/^  EXTRALIBS=-lsocket -lnsl$/;"	macro	line:6
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/Makefile	/^PROGS = opend.poll opend.select$/;"	macro	line:9
+cli_args	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/cliargs.c	/^cli_args(int argc, char **argv)$/;"	function	line:9	signature:(int argc, char **argv)
+handle_request	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/request.c	/^handle_request(char *buf, int nread, int clifd, uid_t uid)$/;"	function	line:5	signature:(char *buf, int nread, int clifd, uid_t uid)
+loop	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/loop.select.c	/^loop(void)$/;"	function	line:5	signature:(void)
+CS_OPEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/opend.h	/^#define	CS_OPEN /;"	macro	line:4
+CL_OPEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/opend.h	/^#define	CL_OPEN /;"	macro	line:5
+fd	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/opend.h	/^  int	fd;			\/* fd, or -1 if available *\/$/;"	member	line:13	struct:__anon4
+uid	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/opend.h	/^  uid_t	uid;$/;"	member	line:14	struct:__anon4
+Client	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/opend.h	/^} Client;$/;"	typedef	line:15	typeref:struct:__anon4
+NALLOC	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/loop.poll.c	/^#define NALLOC	/;"	macro	line:4	file:
+grow_pollfd	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/loop.poll.c	/^grow_pollfd(struct pollfd *pfd, int *maxfd)$/;"	function	line:7	file:	signature:(struct pollfd *pfd, int *maxfd)
+loop	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/loop.poll.c	/^loop(void)$/;"	function	line:25	signature:(void)
+debug	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^int		 debug, oflag, client_size, log_to_stderr;$/;"	variable	line:4
+oflag	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^int		 debug, oflag, client_size, log_to_stderr;$/;"	variable	line:4
+client_size	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^int		 debug, oflag, client_size, log_to_stderr;$/;"	variable	line:4
+log_to_stderr	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^int		 debug, oflag, client_size, log_to_stderr;$/;"	variable	line:4
+errmsg	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^char	 errmsg[MAXLINE];$/;"	variable	line:5
+pathname	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^char	*pathname;$/;"	variable	line:6
+client	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^Client	*client = NULL;$/;"	variable	line:7
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/opend/main.c	/^main(int argc, char *argv[])$/;"	function	line:10	signature:(int argc, char *argv[])
+CREDSTRUCT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define CREDSTRUCT	/;"	macro	line:6	file:
+CR_UID	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define CR_UID	/;"	macro	line:7	file:
+SCM_CREDTYPE	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define SCM_CREDTYPE	/;"	macro	line:8	file:
+CREDSTRUCT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define CREDSTRUCT	/;"	macro	line:10	file:
+CR_UID	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define CR_UID	/;"	macro	line:11	file:
+CREDOPT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define CREDOPT	/;"	macro	line:12	file:
+SCM_CREDTYPE	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define SCM_CREDTYPE	/;"	macro	line:13	file:
+RIGHTSLEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define RIGHTSLEN	/;"	macro	line:19	file:
+CREDSLEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define CREDSLEN	/;"	macro	line:20	file:
+CONTROLLEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^#define	CONTROLLEN	/;"	macro	line:21	file:
+cmptr	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^static struct cmsghdr	*cmptr = NULL;		\/* malloc'ed first time *\/$/;"	variable	line:23	typeref:struct:cmsghdr	file:
+recv_ufd	/home/andrea/文档/study/note/linux/apue/examples/ipc2/recvfd2.c	/^recv_ufd(int fd, uid_t *uidptr,$/;"	function	line:31	signature:(int fd, uid_t *uidptr, ssize_t (*userfunc)(int, const void *, size_t))
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/bindunix.c	/^main(void)$/;"	function	line:6	signature:(void)
+CL_OPEN	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/open.h	/^#define	CL_OPEN /;"	macro	line:4
+ROOT	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/Makefile	/^ROOT=..\/..$/;"	macro	line:1
+PLATFORM	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/Makefile	/^PLATFORM=$(shell $(ROOT)\/systype.sh)$/;"	macro	line:2
+EXTRALIBS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/Makefile	/^  EXTRALIBS=-lsocket -lnsl$/;"	macro	line:6
+PROGS	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/Makefile	/^PROGS =	openclient$/;"	macro	line:9
+BUFFSIZE	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/main.c	/^#define	BUFFSIZE	/;"	macro	line:4	file:
+main	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/main.c	/^main(int argc, char *argv[])$/;"	function	line:7	signature:(int argc, char *argv[])
+csopen	/home/andrea/文档/study/note/linux/apue/examples/ipc2/open.fe/open.c	/^csopen(char *name, int oflag)$/;"	function	line:9	signature:(char *name, int oflag)
+main	/home/andrea/文档/study/note/linux/apue/examples/signals/sigusr.c	/^main(void)$/;"	function	line:6	signature:(void)
+sig_usr	/home/andrea/文档/study/note/linux/apue/examples/signals/sigusr.c	/^sig_usr(int signo)		\/* argument is signal number *\/$/;"	function	line:17	file:	signature:(int signo)

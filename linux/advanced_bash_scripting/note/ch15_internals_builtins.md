@@ -298,7 +298,7 @@ bind 内建命令用来显示或修改 readline 的键绑定.
 ```sh
 bash$ sleep 100 &
 [1] 1384 # "1"是任务标识符,
-# kill 掉座任务或进程，可以使用 kill % <任务标识符> 或者使用 kill <进程ID>
+# kill 掉任务或进程，可以使用 kill % <任务标识符> 或者使用 kill <进程ID>
 bash $ jobs
 [1]+  Running                 sleep 100 &
 ```

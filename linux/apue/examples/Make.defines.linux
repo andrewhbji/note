@@ -1,0 +1,35 @@
+# Common make definitions, customized for each platform
+
+# Definitions required in all program directories to compile and link
+# C programs using gcc.
+
+# 使用 gcc 编译
+CC=gcc
+
+COMPILE.c=$(CC) $(CFLAGS) $(CPPFLAGS) -c
+LINK.c=$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+
+# gcc -o 的参数
+LDFLAGS=
+
+# 在LDLIBS中使用
+LDDIR=-L$(ROOT)/lib
+
+# gcc -o 的参数
+LDLIBS=$(LDDIR) -lapue $(EXTRALIBS)
+
+#重新设置 CFLAGS
+CFLAGS=-ansi -I$(ROOT)/include -Wall -DLINUX -D_GNU_SOURCE $(EXTRA)
+
+RANLIB=echo
+
+# 指定打包命令
+AR=ar
+
+# 指定awk命令
+AWK=awk
+
+LIBAPUE=$(ROOT)/lib/libapue.a
+
+# Common temp files to delete from each directory.
+TEMPFILES=core core.* *.o temp.* *.out
