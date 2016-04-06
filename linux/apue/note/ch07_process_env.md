@@ -40,6 +40,7 @@ atexit 函数可以注册32个函数在exit执行的时候自动调用
 int atexit(void (*func)(void));
 返回值：成功返回0，失败返回非0值
 ```
+
 ![various way of terminate](../img/ch07/figure_7_2_various_ways_of_terminate.png)
 
 ### 退出状态

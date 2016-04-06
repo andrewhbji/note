@@ -134,7 +134,7 @@ main(void)
 	int		n, fd1[2], fd2[2];
 	pid_t	pid;
 	char	line[MAXLINE];
-    
+
     /* 子进程被kill后，再向管道写入数据时，父进程处理SIGPIPE信号 */
 	if (signal(SIGPIPE, sig_pipe) == SIG_ERR)
 		err_sys("signal error");
@@ -244,7 +244,7 @@ int mkfifoat(int fd, const char *path, mode_t mode);
 ```
 # prog3 在后台运行，等待数据从管道 fifo1 输入
 mkfifo fifo1
-prog3 < fifo1 & 
+prog3 < fifo1 &
 # input 文件 通过 tee 命令同时输出到 fifo1 和 prog2
 prog1 < infil | tee fifo1 | prog2
 ```
@@ -259,7 +259,7 @@ prog1 < infil | tee fifo1 | prog2
 但是，服务器进程不能使用这个管道向客户端应答，因为客户端不可能直到何时去读取这些响应以及何时响应其他客户进程；服务器进程应该为每个客户端进程都建立一条管道，通过这个管道响应客户端，这样做可以使客户端专用的管道遗留在文件系统中，此外服务器进程还需要处理SIGPIPE信号，以便在客户端进程终止后服务器端进程清理不需要的管道。如下图所示：
 
 ![使用FIFO进行客户端进程和服务器端进程通信](../img/ch15/figure_15_23.png)
- 
+
 ## XSI IPC 的共同点
 消息队列、信号量以及共享内存是 XSI 提供的 IPC 机制
 

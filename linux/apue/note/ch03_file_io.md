@@ -127,9 +127,11 @@ ssize_t writev(int fd, const struct iovec *iov, int iovcnt);
 >备注：UNIX使用vnode节点指向inode，vnode还包含文件的类型和操作文件的函数指针，文件表节点指向vnode节点
 
 当一个进程打开多个文件时状态如图3.7
+
 ![图 3.7 kernel_data_structures_of_open_file](../img/ch03/figure_3_7_kernel_data_structures_of_open_file.png)
 
 当多个进程打开一个文件时状态如图3.8
+
 ![图 3.8_two_independent_processes_with_the_same_file_open](../img/ch03/figure_3_8_two_independent_processes_with_the_same_file_open.png)
 
 ## 原子操作
