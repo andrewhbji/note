@@ -168,6 +168,7 @@ int dup2(int fd, int value);
 - dup2将指定副本节点的fd为value
 - 如果value已经被其他文件使用，则关闭文件并释放原value节点，再创建副本
 - 如果fd等于value，则dup2返回value，不会关闭文件
+
 ![图 3.9 dup](../img/ch03/figure_3_9_dup.png)
 
 ## sync,fsync 和 fdatasync
