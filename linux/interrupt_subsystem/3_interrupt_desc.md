@@ -283,9 +283,15 @@ int irq_set_irq_type(unsigned int irq, unsigned int type)
 } 
 ```
 - 这里使用 irq_get_desc_buslock 代替 irq_get_desc_lock，是因为 irq_set_desc_buslock 需要通过 desc->irq_data.chip->irq_set_type 函数设置 interrupt controller，对于 SOC 内部的 interrupt controller 可以通过中断控制器的寄存器（memory map 到 CPU 的地址空间）实现快速访问，因此关闭中断＋spin lock没有问题，但是如果该 interrupt controller 是一个 I2C 接口的 IO 扩展芯片（也提供中断功能），直接对其进行 spin lock 操作会浪费 CPU 时间，这时候最好选择 bus lock 的方式 
-- 对于irq_set_irq_type 函数，它是 for 1-N mode 的 interrupt source 使用的，所以要使用 IRQ_GET_DESC_CHECK_GLOBAL 宏。如果底层通过 IRQ_GET_DESC_CHECK_PERCPU 宏设定该 interrupt 是 per CPU 的，那么 irq_set_irq_type 要返回错误。
+- 对于 irq_set_irq_type 函数，它是 for 1-N mode 的 interrupt source 使用的，所以要使用 IRQ_GET_DESC_CHECK_GLOBAL 宏。如果底层通过 IRQ_GET_DESC_CHECK_PERCPU 宏设定该 interrupt 是 per CPU 的，那么 irq_set_irq_type 要返回错误。
 
->备注：SMP 系统下，中端有两种形态： 1-N mode，即只有1个 CPU 处理中断；N-N mode，即所有的 CPU 都是独立的收到中断，如果有 N 个 CPU 收到中断，那么就有 N 个处理器来处理该中断。在 GIC 中， SPI 使用 1-N 模型，PPI 和 SGI使用 N-N 模型。1-N 模型，系统（硬件加上软件）必须保证一个中断被一个 CPU 处理，对于 GIC，一个 SPI 的中断可以 trigger 多个 CPU 的 irq line（如果 Distributor 中的 Interrupt Processor Targets Registers 有多个 bit 被设定）但是，该interrupt source和CPU的接口寄存器（例如 ack register ）只有一套，也就是说，这些寄存器接口是全局的，是 global 的，一旦一个 CPU ack（读 Interrupt Acknowledge Register，获取 interrupt ID）了该中断，那么其他的 CPU 看到的该 interupt source 的状态也是已经 ack 的状态。在这种情况下，如果第二个 CPU ack 该中断的时候，将获取一个假的 interrupt ID。对于 PPI 或者 SGI，使用 N-N mode，其 interrupt source 的寄存器是 per CPU 的，也就是每个 CPU 都有自己的、针对该 interrupt source 的寄存器接口（这些寄存器叫做 banked register）。一个 CPU 清除了该 interrupt source 的 pending 状态，其他的 CPU 感知不到这个变化，它们仍然认为该中断是 pending 的。
+>备注：SMP 系统下，中断分两类： 
+> - 1-N mode，外设的 IRQ line连接到所有 CPU interface，但必须保证一个中断只被一个 CPU 处理。
+
+>   GIC 中，SPI 使用 1-N mode，一个 SPI 的中断可以 trigger 多个 CPU 的 irq line（如果 Distributor 中的 Interrupt Processor Targets Registers 有多个 bit 被设定）但是，该 interrupt source 和 CPU 的接口寄存器（例如 ack register ）只有一套，也就是说，这些寄存器接口是全局的，是 global 的，一旦一个 CPU ack（读 Interrupt Acknowledge Register，获取 interrupt ID）了该中断，那么其他的 CPU 看到的该 interupt source 的状态也是已经 ack 的状态。在这种情况下，如果第二个 CPU ack 该中断的时候，将获取一个伪中断 ID；
+> - N-N mode，每个 CPU interface 都连接一组信号线，每组信号线上的中断需要由其连接的 CPU 处理。
+
+>   GIC 中，PPI 和 SGI使用 N-N mode，其 interrupt source 的寄存器是 per CPU 的，也就是每个 CPU 都有自己的、针对该 interrupt source 的寄存器接口（这些寄存器叫做 banked register），一个 CPU 清除了该 interrupt source 的 pending 状态，其他的 CPU 感知不到这个变化，它们仍然认为该中断是 pending 的。
 
 ### irq_set_chip_data
 

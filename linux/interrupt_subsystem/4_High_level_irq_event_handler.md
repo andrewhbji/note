@@ -153,7 +153,7 @@ unsigned long probe_irq_on(void)
         raw_spin_lock_irq(&desc->lock);
 
         if (desc->istate & IRQS_AUTODETECT) {
-            if (!(desc->istate & IRQS_WAITING)) {   /* desc->istate 只设置 IRQS_AUTODETECT 而没有设置 IRQS_WAITING 表示该 IRQ number 可能因为 spurious interrupts 导致不可用*/
+            if (!(desc->istate & IRQS_WAITING)) {   /* desc->istate 只设置 IRQS_AUTODETECT 而没有设置 IRQS_WAITING 表示该 IRQ number 可能因为 spurious interrupts 导致不可用 */
                 desc->istate &= ~IRQS_AUTODETECT;
                 irq_shutdown(desc);                 /* 清除 IRQ number 对应 desc 的 IRQS_AUTODETECT 位，然后关闭 */
             } else
@@ -455,7 +455,7 @@ void handle_edge_irq(unsigned int irq, struct irq_desc *desc)
          * 执行 ISR 时是不持有 desc->lock 的，如果此时再触发中断，其他执行单元会处理该中断，导致 IRQ line 在中断控制器上重新处于 pending 状态。
          * 此时需要将中断源解除屏蔽（unmask），这样后续的中断可以继续触发，由其他的CPU处理
          */
-        if (unlikely(desc->istate & IRQS_PENDING)) { －－－－－－－－－（4）
+        if (unlikely(desc->istate & IRQS_PENDING)) { 
             if (!irqd_irq_disabled(&desc->irq_data) &&
                 irqd_irq_masked(&desc->irq_data))
                 unmask_irq(desc);

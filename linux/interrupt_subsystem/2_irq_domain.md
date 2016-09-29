@@ -136,7 +136,7 @@ struct irq_domain_ops {
     int (*xlate)(struct irq_domain *d, struct device_node *node, const u32 *intspec, unsigned int intsize, unsigned long *out_hwirq, unsigned int *out_type);
 }; 
 ```
-- xlate 函数用于在 DT 中指定节点（node 参数指定）的多个（initsize 参数指定） interrupts 属性 翻译成 HW interrupt ID（out_hwirq 参数）和 trigger （out_type）
+- xlate 函数用于在 DT 中指定节点（node 参数指定）的多个（initsize 参数指定） interrupts 属性（由 intspec 传入）翻译成 HW interrupt ID（out_hwirq 参数）和 trigger （out_type）
 - match 函数用于判断指定的 interrupt controller（node参数）是否和指定的 irq domain匹配（d参数），如果匹配的话，返回1。不过一般不需要提供这个函数，因为 struct irq_domain 中有一个 of_node 指针指向了对应的 interrupt controller 的device node，而且有默认的匹配函数来判断 of_node 成员是否等于传入的 node 参数。
 - map 函数在创建或更新 HW irterrput ID - Interrupt ID 映射关系时调用，用于设定该 IRQ number 对应中断描述符（struct irq_desc）的  irq chip、irq chip data、highlevel irq-events handler 
 - unmap 函数与 map 函数相反，在解除 HW irterrput ID - Interrupt ID 关系时调用

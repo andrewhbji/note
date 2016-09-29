@@ -41,7 +41,7 @@ CONFIG_PREEMPT 选项打开后，linux kernel就支持了内核代码的抢占
 - 为了同步，内核中总有些代码需要持有自旋锁资源，或者显式的调用 preempt_disable 来禁止抢占
 - 中断上下文（不止中断处理，还包括 softirq、timer、tasklet）总是可以抢占进程上下文
 
-### 进一步提高linux内核的实时性
+### 进一步提高 linux 内核的实时性
 
 在 Linux 内核中，一个外设的中断处理被分为 top half 和 bottom half，top half 进行最关键，最基本的处理，而比较耗时的操作被放到 bottom half（softirq、tasklet）中延迟执行。
 
@@ -224,7 +224,7 @@ static int __setup_irq(unsigned int irq, struct irq_desc *desc, struct irqaction
 } 
 ```
 
-irq_setup_forced_threading 函数用于将 ISR 线程化
+如果 desc 没有设置 _IRQ_NOTHREAD， __setup_irq 使用 irq_setup_forced_threading 函数用于将 ISR 线程化
 ```c
 static void irq_setup_forced_threading(struct irqaction *new)
 {
@@ -303,7 +303,7 @@ if (old) {
 
 ```
 
-#### thread mask 的设定
+#### thread mask 的设置
 
 对于 one shot 类型的中断，我们还需要设定 thread mask。如果一个 one shot 类型的中断只有一个 threaded handler（即 IRQ number 不支持共享 ISR）,临时变量 thread_mask 等于0，irqaction 的 thread_mask 成员总是使用第一个 bit 来标识该 irqaction。如果 IRQ number 支持共享 ISR，每一个 irqaction 的 thread_mask 成员都会有不同的 bit 来表示自己（取值为 0x01、0x02、0x04、0x08、0x10...，且自己的 bit 不能与其他 irqaction 重复）
 
