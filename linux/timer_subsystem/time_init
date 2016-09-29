@@ -1,0 +1,51 @@
+CLOCKSOURCE_OF_DECLARE(armv7_arch_timer, "arm,armv7-timer", arch_timer_of_init);
+CLOCKSOURCE_OF_DECLARE(armv8_arch_timer, "arm,armv8-timer", arch_timer_of_init);
+CLOCKSOURCE_OF_DECLARE(armv7_arch_timer_mem, "arm,armv7-timer-mem",
+		       arch_timer_mem_init);
+
+
+#define CLOCKSOURCE_OF_DECLARE(name, compat, fn) \
+	OF_DECLARE_1(clksrc, name, compat, fn)
+
+#define OF_DECLARE_1(table, name, compat, fn) \
+		_OF_DECLARE(table, name, compat, fn, of_init_fn_1)  
+        
+__clksrc_of_table
+
+
+void __init clocksource_probe(void)
+{
+	struct device_node *np;
+	const struct of_device_id *match;
+	of_init_fn_1 init_func;
+	unsigned clocksources = 0;
+
+	for_each_matching_node_and_match(np, __clksrc_of_table, &match) {
+		if (!of_device_is_available(np))
+			continue;
+
+		init_func = match->data;
+		init_func(np);
+		clocksources++;
+	}
+
+	clocksources += acpi_probe_device_table(clksrc);
+
+	if (!clocksources)
+		pr_crit("%s: no matching clocksources found\n", __func__);
+}
+  
+
+void __init time_init(void)
+{
+	if (machine_desc->init_time) {
+		machine_desc->init_time();
+	} else {
+#ifdef CONFIG_COMMON_CLK
+		of_clk_init(NULL);
+#endif
+		clocksource_probe();
+	}
+}
+
+start_kernel->time_init
