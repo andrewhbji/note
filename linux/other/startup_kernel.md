@@ -47,6 +47,10 @@ start_kernel
 |    |
 |    `--> machine_desc->init_irq
 |
+|
+|--> timekeeping_init
+|
+|
 |--> time_init
 |    |
 |    `--> machine_desc->init_time
