@@ -1,26 +1,26 @@
 # Linux 设备模型
 
-Linux2.6内核引入了sysfs文件系统。sysfs被看成是与proc同类别的文件系统。sysfs把连接在系统上的设备和总线组织成分级的文件,使其从用户空间可以访问到。
+Linux2.6 内核引入了 sysfs 文件系统。 sysfs 被看成是与 proc 同类别的文件系统。 sysfs 把连接在系统上的设备和总线组织成分级的文件,使其从用户空间可以访问到。
 
-Sysfs被加载在 /sys/目录下,它的子目录包括:
+Sysfs 被加载在 /sys/ 目录下,它的子目录包括:
 
-- Block:在系统中发现的每个块设备在该目录下对应一个子目录。每个子目录中又包含一些属性文件,它们描述了这个块设备的各方面属性,如:设备大小。(loop块设备是使用文件来模拟的)
-- Bus:在内核中注册的每条总线在该目录下对应一个子目录,如: ide pci scsi usbpcmcia 其中每个总线目录内又包含两个子目录:devices和drivers ,devices目录包含了在整个系统中发现的属于该总线类型的设备,drivers目录包含了注册到该总线的所有驱动。
-- Class:将设备按照功能进行的分类,如/sys/class/net目录下包含了所有网络接口。
-- Devices:包含系统所有的设备。
-- Kernel:内核中的配置参数
-- Module:系统中所有模块的信息
-- Firmware:系统中的固件
-- Fs:描述系统中的文件系统
-- Power:系统中电源选项
+- Block :在系统中发现的每个块设备在该目录下对应一个子目录。每个子目录中又包含一些属性文件,它们描述了这个块设备的各方面属性,如:设备大小。( loop 块设备是使用文件来模拟的)
+- Bus :在内核中注册的每条总线在该目录下对应一个子目录,如: ide pci scsi usb pcmcia 其中每个总线目录内又包含两个子目录: devices 和 drivers , devices 目录包含了在整个系统中发现的属于该总线类型的设备,drivers 目录包含了注册到该总线的所有驱动。
+- Class :将设备按照功能进行的分类,如 /sys/class/net 目录下包含了所有网络接口。
+- Devices :包含系统所有的设备。
+- Kernel :内核中的配置参数
+- Module :系统中所有模块的信息
+- Firmware :系统中的固件
+- Fs :描述系统中的文件系统
+- Power :系统中电源选项
 
 ## Kobject, Kset 和 Subsystem 
 
 ### Kobject
 
-Kobject实现了基本的面向对象管理机制,是构成Linux2.6设备模型的核心结构。它与sysfs文件系统紧密相连,在内核中注册的每个kobject对象对应sysfs文件系统中的一个目录。
+Kobject 实现了基本的面向对象管理机制,是构成 Linux2.6 设备模型的核心结构。它与 sysfs 文件系统紧密相连,在内核中注册的每个 kobject 对象对应 sysfs 文件系统中的一个目录。
 
-类似于C++中的基类,Kobject常被嵌入于其他类型(即:容器)中。如bus,devices,drivers都是典型的容器。这些容器通过kobject连接起来,形成了一个树状结构。
+类似于 C++ 中的基类, Kobject 常被嵌入于其他类型(即:容器)中。如 bus,devices,drivers 都是典型的容器。这些容器通过 kobject 连接起来,形成了一个树状结构。
 
 Kobject 结构体(定义于 linux/kobject.h):
 ```c
@@ -48,7 +48,7 @@ Kobject 初始化:
 void kobject_init(struct kobject *kobj);
 int kobject_set_name(struct kobject *kobj, const char *format, ...);
 ```
-- kobject_init 初始化kobject结构
+- kobject_init 初始化 kobject 结构
 - kobject_set_name 命名 kobject 结构
 
 管理 Kobject 引用计数:
@@ -56,8 +56,8 @@ int kobject_set_name(struct kobject *kobj, const char *format, ...);
 struct kobject *kobject_get(struct kobject *kobj);
 void kobject_put(struct kobject *kobj);
 ```
-- kobject_get 将kobject对象的引用计数加1,同时返回该对象指针。
-- kobject_put 将kobject对象的引用计数减1,如果引用计数降为0,则调用release方法释放该kobject对象。
+- kobject_get 将 kobject 对象的引用计数加 1 ,同时返回该对象指针。
+- kobject_put 将 kobject 对象的引用计数减 1,如果引用计数降为 0,则调用 release 方法释放该 kobject 对象。
 
 Kobject 操作:
 ```c
@@ -65,13 +65,13 @@ int kobject_add(struct kobject *kobj);
 int kobject_init_and_add(struct kobject *kobj, struct kobj_type*ktype,struct kobject *parent, const char *fmt, ...)
 void kobject_del(struct kobject *kobj);
 ```
-- kobject_add 将kobject对象注册到Linux系统
-- kobject_init_and_add 初始化kobject,并将其注册到linux系统
-- kobject_del 从Linux系统中删除kobject对象
+- kobject_add 将 kobject 对象注册到 Linux 系统
+- kobject_init_and_add 初始化 kobject ,并将其注册到 linux 系统
+- kobject_del 从 Linux 系统中删除 kobject 对象
 
 ### Kset
 
-kset是具有相同类型的kobject的集合，在sysfs中体现成一个目录
+kset 是具有相同类型的 kobject 的集合，在 sysfs 中体现成一个目录
 
 kset 结构体:
 ```c
@@ -85,12 +85,12 @@ struct kset {
 
 kset 操作
 ```c
-void kset_init(struct kset *kset);              // 初始化kset结构
-int kset_register(struct kset *kset)            // 在内核中注册一个kset
+void kset_init(struct kset *kset);              // 初始化 kset 结构
+int kset_register(struct kset *kset)            // 在内核中注册一个 kset
 extern struct kset * __must_check kset_create_and_add(const char *name,
 						const struct kset_uevent_ops *u,
 						struct kobject *parent_kobj);   //   创建并注册 kset， 并返回 kset 指针  
-void kset_unregister(struct kset *kset)         // 从内核中注销一个kset
+void kset_unregister(struct kset *kset)         // 从内核中注销一个 kset
 ```
 - 这些函数只是调用 kobject_* 函数操作kset内嵌的kobject
 
@@ -107,7 +107,7 @@ kobject_set_name(&my_set->kobj, "The name");
 
 一个 kset 在一个标准内核链表中维护其子元素, 大部分情况下, 被包含的 kobjects 也指向这个 kset
 
-!(../img/ldd3-14-2.png)[一个简单的 kset 层次]
+![一个简单的 kset 层次](../img/ldd3-14-2.png)
 
 ```c
 kset = kset_create_and_add("kset",&uevent_ops,NULL);    // 创建并注册 kset
@@ -137,7 +137,7 @@ if(ret)
 
 ### 默认属性
 
-Kobject 的 ktype 成员是一个指向 kobj_type 结构的指针, 该结构中指定了kobject对象的默认属性
+Kobject 的 ktype 成员是一个指向 kobj_type 结构的指针, 该结构中指定了 kobject 对象的默认属性
 
 kobj_type 结构体：
 ```c
@@ -149,9 +149,9 @@ struct kobj_type {
 	const void *(*namespace)(struct kobject *kobj);
 };
 ```
-- release 是用于释放kobject占用的资源,当kobject的引用计数为0时被调用
+- release 是用于释放 kobject 占用的资源,当 kobject 的引用计数为 0 时被调用
 - sysfs_ops 指定一组用于处理对 Kobject 进行 show 和 store 操作的函数
-- default_attrs 指针数组通过指定多个attribute 结构体指定多个属性文件
+- default_attrs 指针数组通过指定多个 attribute 结构体来指定多个属性文件
 
 attribute 结构体描述 kobject 所表示的目录下的一个属性文件
 ```c
@@ -175,7 +175,7 @@ struct sysfs_ops {
 	ssize_t	(*store)(struct kobject *, struct attribute *, const char *, size_t);
 };
 ```
-- show 用户空间读取属性文件时, 调用此函数, 函数的属性值存入buffer返回给用户空间
+- show 用户空间读取属性文件时, 调用此函数, 函数的属性值存入 buffer 返回给用户空间
 - store 用户空间写属性文件时调用次函数, 用于存储用户传入的属性值
 
 ### 非默认属性
@@ -224,7 +224,7 @@ void sysfs_remove_link(struct kobject *kobj, char *name);
 
 ## 热插拔事件产生
 
-在Linux系统中，当系统配置发生变化时,如:添加kset到系统；移动kobject, 一个通知会从内核空间发送到用户空间,这就是热插拔事件。热插拔事件会导致用户空间中相应的处理程序(如udev,mdev)被调用, 这些处理程序会通过加载驱动程序, 创建设备节点等来响应热插拔事件。
+在 Linux 系统中，当系统配置发生变化时,如:添加 kset 到系统；移动 kobject , 一个通知会从内核空间发送到用户空间,这就是热插拔事件。热插拔事件会导致用户空间中相应的处理程序(如 udev,mdev )被调用, 这些处理程序会通过加载驱动程序, 创建设备节点等来响应热插拔事件。
 
 ### kset_uevent_ops 结构体
 
