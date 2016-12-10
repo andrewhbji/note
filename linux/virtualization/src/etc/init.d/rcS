@@ -1,0 +1,21 @@
+#!/bin/sh
+
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+runlevel=S
+prevlevel=N
+umask 022
+export PATH runlevel prevlevel
+
+mount -a
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts
+#mount -n -t usbfs none /proc/bus/usb
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+mkdir -p /var/lock
+
+ifconfig lo 127.0.0.1
+#ifconfig eth0 10.238.233.5
+
+/bin/hostname -F /etc/sysconfig/HOSTNAME
